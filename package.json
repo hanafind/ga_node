@@ -1,0 +1,22 @@
+{
+  "name": "hana-ga",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "node-sass" : "node-sass",
+    "sass" : "node-sass -wr --source-map true node-sass public/stylesheets/style.scss"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "node-sass": "^8.0.0",
+    "sass-loader": "^13.2.0"
+  }
+}

@@ -1,42 +1,33 @@
-<!DOCTYPE html>
-<html lang="ko">
-  <!-- Body -->
-  <body>
-    <!-- Page wrapper for sticky footer -->
-    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
-    <main class="page-wrapper">
-
-      <!-- Navbar -->
-      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
-      <header class="header navbar navbar-expand-lg bg-light navbar-sticky position-absolute navbar-transparent">
-        <div class="container px-3">
-          <a href="/ga_html" class="navbar-brand pe-3">
-            <img class="top-logo hanafind-black" src="img/logo/hanafind-logo-black.png">
-            <img class="top-logo hanafind-white" src="img/logo/hanafind-logo-white.png">
-          </a>
-          <div id="navbarNav" class="offcanvas offcanvas-end">
-            <div class="offcanvas-header border-bottom">
-              <h5 class="offcanvas-title">Menu</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">하나공감</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="categories" class="dropdown-item">보험</a></li>
-                    <li><a href="categories" class="dropdown-item">금융</a></li>
-                    <li><a href="categories" class="dropdown-item">건강</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>    
-          </div>
-          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </header>
-    </main>
-  </body>
-</html>
+<% if (isPosition)  { %>
+  <header class="header navbar navbar-expand-lg bg-light navbar-sticky position-absolute navbar-transparent">
+<% } else { %>
+  <header class="header navbar navbar-expand-lg bg-light navbar-sticky">
+<% } %>
+  <div class="container px-3">
+    <a href="/" class="navbar-brand pe-3">
+      <img class="top-logo hanafind-black" src="img/logo/hanafind-logo-black.png">
+      <img class="top-logo hanafind-white" src="img/logo/hanafind-logo-white.png">
+    </a>
+    <div id="navbarNav" class="offcanvas offcanvas-end">
+      <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">하나공감</a>
+            <ul class="dropdown-menu">
+              <li><a href="categories?idx=1" class="dropdown-item">보험</a></li>
+              <li><a href="categories?idx=2" class="dropdown-item">금융</a></li>
+              <li><a href="categories?idx=3" class="dropdown-item">건강</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>    
+    </div>
+    <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+  </header>

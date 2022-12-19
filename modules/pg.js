@@ -11,5 +11,5 @@ const query = async(sql, values)=>{
 };
 
 module.exports = {
-    query: query
+    query: query,
 }

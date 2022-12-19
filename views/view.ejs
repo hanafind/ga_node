@@ -41,50 +41,24 @@
     <main class="page-wrapper">
 
       <!-- Navbar -->
-      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
-      <header class="header navbar navbar-expand-lg bg-light navbar-sticky position-absolute navbar-transparent">
-        <div class="container px-3">
-          <a href="/" class="navbar-brand pe-3">
-            <img class="top-logo hanafind-black" src="img/logo/hanafind-logo-black.png">
-            <img class="top-logo hanafind-white" src="img/logo/hanafind-logo-white.png">
-          </a>
-          <div id="navbarNav" class="offcanvas offcanvas-end">
-            <div class="offcanvas-header border-bottom">
-              <h5 class="offcanvas-title">Menu</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">하나공감</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="categories" class="dropdown-item">보험</a></li>
-                    <li><a href="categories" class="dropdown-item">금융</a></li>
-                    <li><a href="categories" class="dropdown-item">건강</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>    
-          </div>
-          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
+      <header>
+        <%- include('header', {isPosition:true}) %>
       </header>
 
       <!--jumbotron-->
       <section class="jumbotron-wrap">
-        <div class="jumbotron" style="background-image: url(img/sample/jumbotron/kitchen.png);">
+        <!-- <div class="jumbotron" style="background-image: url(img/sample/jumbotron/kitchen.png);"> -->
+        <div class="jumbotron" style="background-image: url('<%- data[0].cover_image_path %>')">
             <div class="row">
             <div class="col">
-                <h5 class="feature-heading"><span class="badge bg-light" style="font-size: .8rem;">보험</span></h5>
+                <h5 class="feature-heading"><span class="badge bg-light" style="font-size: .8rem;"><%- data[0].cate_name %></span></h5>
                 <h1 class="entry-title">
-                    <a href="#">음식점 화재보험 가입시 유의사항 5가지</a>
+                    <a href="#"><%- data[0].title %></a>
                 </h1>
                 <p class="entry-meta">
                     <span class="entry-author">
                         <a title="Posts by Feature Shoot" rel="author">하나금융파인드</a>
-                    </span>• 19시간전
+                    </span>• <%- data[0].dt_interval %>
                 </p>
             </div>
             </div>
@@ -93,43 +67,8 @@
       </section>
 
       <section class="container contents-html pt-5">
-        <p class="fs-6">
-            주택 다음으로 화재가 많이 발생하는 곳 2위가 음식점인걸 알고 계시나요?
-음식점을 운영하고 계시다면 꼭 화재보험을 가입 해두시는 것이 소중한 나의 재산을 지킬 수 있는 든든한 수단입니다. 지금부터 음식점 화재보험 가입시 유의사항 5가지를 알아볼게요.
-        </p>
-        <p>
-            <h5 class="pt-3">1. 음식물 배상책임</h5>
-            <p class="fs-6">
-                가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하
-            </p>
-        </p>
-        <p>
-            <h5 class="pt-3">2. 시설소유관리자 배상책임</h5>
-            <p class="fs-6">
-                가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하 가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하
-            </p>
-        </p>
-        <p>
-            <h5 class="pt-3">3. 가스사고 배상책임</h5>
-            <p class="fs-6">
-                가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 
-            </p>
-        <p>
-            <h5 class="pt-3">4. 구내폭발파열 위험</h5>
-            <p class="fs-6">
-                가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하
-            </p>
-        </p>
-        <p>
-            <h5 class="pt-3">5. 화재 배상책임</h5>
-            <p class="fs-6">
-                가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 
-            </p>
-        </p>
-        <p class="fs-6 mt-5">
-            지금까지 음식점 화재보험 가입시 유의사항 5가지를 알아보았습니다.
-            언제나 화재 사고에 조심하시기 바랍니다.
-        </p>
+        <%- data[0].contents %>
+
         <p class="fs-xs mt-5" style="font-size: .6rem !important;">
             하나금융파인드(주) (보험대리점 등록번호:제2021040072호)<br>
             본 광고는 광고심의기준을 준수하였으며, 유효기간은 심의일로부터 1년입니다.<br>

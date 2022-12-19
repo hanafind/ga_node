@@ -44,7 +44,7 @@
       <!-- Navbar -->
       <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
     <header>
-      <% include header %>
+      <%- include('header', {isPosition:true}) %>
     </header>
       
       <!--jumbotron-->
@@ -53,69 +53,30 @@
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide">
-              <div class="jumbotron" style="background-image: url(img/sample/jumbotron/frustrated-man-on-computer.jpg);">
-                  <div class="row">
-                    <div class="col">
-                        <h5 class="feature-heading">추천 포스트</h5>
-                        <h1 class="entry-title">
-                            <a href="view">자동차보험, 다이렉트로 가입하면 얼마나 저렴할까?</a>
-                        </h1>
-                        <p class="entry-meta">
-                            <span class="entry-author">
-                                <a title="Posts by Feature Shoot" rel="author">하나금융파인드</a>
-                            </span>• 19시간전
-                        </p>
-                        <p class="entry-excerpt">
-                          자동차보험은 운전면허 취득 후 의무적으로 가입해야 하는 보장성 상품이며, 미가입 시 처벌을 받거나 과태료가 부과된다. 다이렉트 자동차보험 가입 방법과 유의할 점을 알아보자.
-                        </p>
+            <% for(var i=0; i<data_recommand.length; i++) { %>
+              <div class="swiper-slide">
+                <div class="jumbotron" style="background-image: url('<%- data_recommand[i].cover_image_path %>');">
+                    <div class="row">
+                      <div class="col">
+                          <h5 class="feature-heading">추천 포스트</h5>
+                          <h1 class="entry-title">
+                              <a href="view"><%- data_recommand[i].title %></a>
+                          </h1>
+                          <p class="entry-meta">
+                              <span class="entry-author">
+                                  <a title="Posts by Feature Shoot" rel="author">하나금융파인드</a>
+                              </span>• <%- data_recommand[i].dt_interval %>
+                          </p>
+                          <p class="entry-excerpt">
+                            <%= data_recommand[i].contents %>
+                          </p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="jumbotron-overlay"></div>
+                    <div class="jumbotron-overlay"></div>
+                </div>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="jumbotron" style="background-image: url(img/sample/jumbotron/business-pug-working-on-laptop.jpg);">
-                  <div class="row">
-                    <div class="col">
-                        <h5 class="feature-heading">추천 포스트</h5>
-                        <h1 class="entry-title">
-                            <a href="view">펫보험도 다이렉트 시대 우리집 댕댕이도 가입해볼까?</a>
-                        </h1>
-                        <p class="entry-meta">
-                            <span class="entry-author">
-                                <a title="Posts by Feature Shoot" rel="author">하나금융파인드</a>
-                            </span>• 19시간전
-                        </p>
-                        <p class="entry-excerpt">
-                          펫보험은 개나 고양이 등 반려동물의 질병·상해 등을 보장하는 보험이다. 작년 말 반려동물 시장 규모가 연간 4조원을 넘어선 가운데 보험사들이 ‘장기 펫보험’ 출시에 속도를 내고 있다.
-                        </p>
-                    </div>
-                  </div>
-                  <div class="jumbotron-overlay"></div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="jumbotron" style="background-image: url(img/sample/jumbotron/bills-and-receipts.jpg);">
-                  <div class="row">
-                    <div class="col">
-                        <h5 class="feature-heading">추천 포스트</h5>
-                        <h1 class="entry-title">
-                            <a href="view">예·적금 금리 껑충…‘저축보험 깰까’ 고민하는 4050</a>
-                        </h1>
-                        <p class="entry-meta">
-                            <span class="entry-author">
-                                <a title="Posts by Feature Shoot" rel="author">하나금융파인드</a>
-                            </span>• 19시간전
-                        </p>
-                        <p class="entry-excerpt">
-                          자동차보험은 운전면허 취득 후 의무적으로 가입해야 하는 보장성 상품이며, 미가입 시 처벌을 받거나 과태료가 부과된다. 다이렉트 자동차보험 가입 방법과 유의할 점을 알아보자.
-                        </p>
-                    </div>
-                  </div>
-                  <div class="jumbotron-overlay"></div>
-              </div>
-            </div>
+            <% } %>
+            
           </div>
           <!-- If we need pagination -->
           <div class="swiper-pagination"></div>

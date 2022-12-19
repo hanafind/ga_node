@@ -40,145 +40,18 @@
     <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
     <main class="page-wrapper">
 
-      <!-- Navbar -->
-      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
-      <header class="header navbar navbar-expand-lg bg-light navbar-sticky">
-        <div class="container px-3">
-          <a href="/" class="navbar-brand pe-3">
-            <img class="top-logo hanafind-black" src="img/logo/hanafind-logo-black.png">
-            <img class="top-logo hanafind-white" src="img/logo/hanafind-logo-white.png">
-          </a>
-          <div id="navbarNav" class="offcanvas offcanvas-end">
-            <div class="offcanvas-header border-bottom">
-              <h5 class="offcanvas-title">Menu</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">하나공감</a>
-                  <ul href="#" class="dropdown-menu">
-                    <li><a href="categories" class="dropdown-item">보험</a></li>
-                    <li><a href="categories" class="dropdown-item">금융</a></li>
-                    <li><a href="categories" class="dropdown-item">건강</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>    
-          </div>
-          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
+      <header>
+        <%- include('header', {isPosition:false}) %>
       </header>
       
       <section class="container posts-wrap pt-5 pb-3">
-        <h1 class="h3 mb-4">보험</h1>
+        <h1 class="h3 mb-4"><%- data[0].cate_name %></h1>
         <div class="row">
-          <div class="col-md-4">
-            <div class="card">
-              <img src="img/sample/post-thumb/frustrated-man-on-computer.jpg" class="card-img-top" alt="Card image">
-              <div class="card-body">
-                <div class="card-catogory"><span class="badge bg-light">보험</span></div>
-                <h5 class="card-title"><a href="view">자동차보험, 다이렉트로 가입하면 얼마나 저렴할까?</a></h5>
-                <p class="card-text fs-sm">자동차보험은 운전면허 취득 후 의무적으로 가입해야 하는 보장성 상품이며, 미가입 시 처벌을 받거나 과태료가 부과된다. 단, 의무보험이라고 해서 가입하는 것으로</p>
-                <p class="card-date card-text fs-sm">14시간 전</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img src="img/sample/post-thumb/contact-us-image.jpg" class="card-img-top" alt="Card image">
-              <div class="card-body">
-                <div class="card-catogory"><span class="badge bg-light">보험</span></div>
-                <h5 class="card-title"><a href="view">전화로 하는 무료 보험상담 과연 믿을수 있을까?</a></h5>
-                <p class="card-text fs-sm">앞으로는 직장인, 맞벌이부부, 자영업자 등 근무시간에 전화상담을 이용하기 어려웠던 고객들도 야간 상담을 통해 보험유지 상담을 받을 수 있게 됐다. 현재 생명보험사</p>
-                <p class="card-date card-text fs-sm">2022.12.12</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img src="img/sample/post-thumb/girl-holiding-womans-hand-in-wonder.jpg" class="card-img-top" alt="Card image">
-              <div class="card-body">
-                <div class="card-catogory"><span class="badge bg-light">보험</span><span class="badge bg-light">라이프</span></div>
-                <h5 class="card-title"><a href="view">겨울철 어린이 안전사고가 불안하다면 어린이보험을 알아보자</a></h5>
-                <p class="card-text fs-sm">최근 코로나19 확산이 주춤하면서 코로나 이전의 야외활동들이 하나둘 재개되고 있다. 오랜만에 진행되는 야외활동인 만큼 아이들이 각종 안전사고에 노출될 확률이</p>
-                <p class="card-date card-text card-date fs-sm">14시간 전</p>
-              </div>
-            </div>
-          </div>
+          <% for(var i=0; i<data.length; i++) { %>
+            <% include card %>
+        <% } %>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card">
-              <img src="img/sample/post-thumb/business-pug-working-on-laptop.jpg" class="card-img-top" alt="Card image">
-              <div class="card-body">
-                <div class="card-catogory"><span class="badge bg-light">보험</span></div>
-                <h5 class="card-title"><a href="view">펫보험도 다이렉트 시대 우리집 댕댕이도 가입해볼까?</a></h5>
-                <p class="card-text fs-sm">펫보험은 개나 고양이 등 반려동물의 질병·상해 등을 보장하는 보험이다. 아직 국내에서 생소한 펫보험으로 돌풍을 일으킨 것은 반려동물을 위한 상품 설계를 촘촘하게</p>
-                <p class="card-date card-text fs-sm">14시간 전</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img src="img/sample/post-thumb/hand-putting-money-in-bank.jpg" class="card-img-top" alt="Card image">
-              <div class="card-body">
-                <div class="card-catogory"><span class="badge bg-light">보험</span></div>
-                <h5 class="card-title"><a href="view">저축보험 빠르게 들수록 좋은 이유</a></h5>
-                <p class="card-text fs-sm">은행권 못지않게 보험업계에서도 요새 불꽃 튀는 수신 경쟁이 펼쳐지고 있다. 생보험사들이 판매하는 저축성보험 얘기다. 시중 저축성보험 상품의 최고 이자율은 5.9%</p>
-                <p class="card-date card-text fs-sm">2022.12.12</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img src="img/sample/post-thumb/mother-and-father-smiling-down-on-their-newborn-baby.jpg" class="card-img-top" alt="Card image">
-              <div class="card-body">
-                <div class="card-catogory"><span class="badge bg-light">보험</span><span class="badge bg-light">라이프</span></div>
-                <h5 class="card-title"><a href="view">'태아보험'에서 꼭 준비해야 할 특약 알아보기</a></h5>
-                <p class="card-text fs-sm">아이 필수 보장은? 보험료는? 고민 많은 당신이 찾던 보험, 태아보험특약. 곧 만나게 될 우리 아이를 위한 거라면 더욱 꼼꼼하게 태아보험특약 알아보기</p>
-                <p class="card-date card-text card-date fs-sm">14시간 전</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card">
-              <img src="img/sample/post-thumb/stock-market-tracking-and-stocks.jpg" class="card-img-top" alt="Card image">
-              <div class="card-body">
-                <div class="card-catogory"><span class="badge bg-light">보험</span></div>
-                <h5 class="card-title"><a href="view">주가 곤두박질 '롯데칠성' 어디가 바닥일까?</a></h5>
-                <p class="card-text fs-sm">롯데칠성에서 출시한 소주 "새로"가 소비자들에게 외면 받고있다. 한 자영업자 말에 따르면 손님이 1병 시키고 더이상 시키지 않는다고 전했다.</p>
-                <p class="card-date card-text fs-sm">14시간 전</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img src="img/sample/post-thumb/dog-staying-warm.jpg" class="card-img-top" alt="Card image">
-              <div class="card-body">
-                <div class="card-catogory"><span class="badge bg-light">보험</span></div>
-                <h5 class="card-title"><a href="view">반려인 능력 시험 - 당신의 반려 점수는요?</a></h5>
-                <p class="card-text fs-sm">나는 나의 반려동물에게 좋은 '반려인'인지 스스로 알아보는 '셀프 시험'이 열린다. 서울시가 올해에도 '서울시 반려인 능력시험'을 개최한다.</p>
-                <p class="card-date card-text fs-sm">2022.12.12</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img src="img/sample/post-thumb/online-shopping.jpg" class="card-img-top" alt="Card image">
-              <div class="card-body">
-                <div class="card-catogory"><span class="badge bg-light">보험</span><span class="badge bg-light">라이프</span></div>
-                <h5 class="card-title"><a href="view"></a>다가오는 연말정산 신용카드 소득공제·세액공제 1+1 항목은?</h5>
-                <p class="card-text fs-sm">카드 소득공제를 받기 위해서는 연간 카드사용액(1월 1일~12월 31일)이 연봉의 25%를 초과해야 합니다. 이 조건을 충족하면, 25% 초과분의 15~30%에 해당하는 금액</p>
-                <p class="card-date card-text card-date fs-sm">14시간 전</p>
-              </div>
-            </div>
-          </div>
-        </div>
+
         <button class="btn btn-lg btn-outline-primary w-100 mb-3">
           <i class="bx bx-down-arrow-alt fs-xl me-2"></i>
           더 보기
@@ -187,25 +60,10 @@
 
     </main>
 
-    <!-- Footer -->
-    <footer class="footer dark-mode bg-dark pt-4 pb-4 pb-lg-4">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="navbar-brand text-dark p-0 me-0 mb-1 mb-lg-2">
-              (주)하나금융파인드
-            </div>
-            <p class="footer-address fs-sm text-light opacity-70  p-0 me-0 mb-1 mb-lg-2">
-                사업자번호 : 159-81-02139 | 보험대리점 등록번호 : 제2021040072호<br>
-                주소 : 서울특별시 종로구 창경궁로 117, 5층
-            </p>
-          </div>
-        </div>
-        <p class="nav d-block fs-xs text-md-start pb-0 pb-lg-0 mb-0">
-          <span class="footer-copy text-light opacity-50">&copy; 2022. Hana Financial Find Inc. All rights reserved.</span>
-        </p>
-      </div>
-    </footer>
+   <!-- Footer -->
+   <footer>
+    <% include footer %>
+  </footer>
 
     <!-- Back to top button -->
     <a href="#top" class="btn-scroll-top" data-scroll>

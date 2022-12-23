@@ -40,31 +40,27 @@
     <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
     <main class="page-wrapper">
 
-      <header>
-        <%- include('header', {isPosition:false}) %>
-      </header>
+    <!-- Header -->
+     <%- include('header', {isPosition:false}) %>
       
       <section class="container posts-wrap pt-5 pb-3">
-        <h1 class="h3 mb-4"><%- data[0].cate_name %></h1>
+        <h1 class="h3 mb-4"><%- data[0].name_ko %></h1>
         <div class="row">
           <% for(var i=0; i<data.length; i++) { %>
             <% include card %>
         <% } %>
         </div>
 
-        <button class="btn btn-lg btn-outline-primary w-100 mb-3">
-          <i class="bx bx-down-arrow-alt fs-xl me-2"></i>
-          더 보기
-        </button>
+      <!-- Page -->
+      <% include paging %>
+
       </section>
 
     </main>
 
    <!-- Footer -->
-   <footer>
-    <% include footer %>
-  </footer>
-
+   <% include footer %>
+  
     <!-- Back to top button -->
     <a href="#top" class="btn-scroll-top" data-scroll>
       <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>

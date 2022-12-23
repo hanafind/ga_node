@@ -1,9 +1,9 @@
 <div class="col-md-4">
     <div class="card">
-        <img src="<%- data[i].cover_image_path %>" class="card-img" alt="Card image">
+        <img src="<%- data[i].cover_image_url %>" class="card-img" alt="Card image">
         <div class="card-body">
-            <div class="card-catogory"><span class="badge bg-light"><%- data[i].cate_name %></span></div>
-            <h5 class="card-title"><a href="view?idx=<%- data[i].idx %>"> <%- data[i].title %> </a></h5>
+            <div class="card-catogory"><span class="badge bg-light"><%- data[i].name_ko %></span></div>
+            <h5 class="card-title"><a href="view?post=<%- data[i].idx %>"> <%- data[i].title %> </a></h5>
             <p class="card-text fs-sm"><%= data[i].contents %></p>
             <p class="card-date card-text fs-sm"><%- data[i].dt_interval %></p>
         </div>

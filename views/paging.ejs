@@ -1,0 +1,19 @@
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <% for(var i=1; i<=data_pageInfo[0].pagecnt; i++) { %>
+      <% if (i == data_pageInfo[0].currentPage) { %>
+        <li class="page-item active" aria-current="page">
+        <span class="visually-hidden">(current)</span>
+      <% } else { %>
+        <li class="page-item"></li>
+      <% } %>
+        <a href="/<%- data_pageInfo[0].url %><%- i %>" class="page-link"><%- i %></a>
+      </li>
+    <% } %>
+    <li class="page-item">
+      <a href="/<%- data_pageInfo[0].url %><%- data_pageInfo[0].pagecnt %>" class="page-link">
+        <i class="bx bx-chevron-right mx-n1"></i>
+      </a>
+    </li>
+  </ul>
+</nav>

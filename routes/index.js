@@ -62,7 +62,7 @@ router.get('/view', async function(req, res) {
         AND pcm.post_categories_idx = $2
         ORDER BY p.idx desc 
         LIMIT 2;`;
-  values = [req.query.post, result[0].post_categories_idx];
+  values = [req.query.post, result[0].category_idx];
   var result2 = await modules.pg.query(sql, values);
   
   // 추천 포스트

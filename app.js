@@ -5,6 +5,12 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const config = require(`./config/${process.env.NODE_ENV}.json`);
 
+// const session = require('express-session');
+const pg = require('pg');
+const expressSession = require('express-session');
+const pgSession = require('connect-pg-simple')(expressSession);
+const pgPool = new pg.Pool(config.postgresql);
+
 var indexRouter = require('./routes/index');
 
 var app = express();
@@ -23,6 +29,34 @@ app.use('/', indexRouter);
 app.use('/categories', indexRouter);
 app.use('/view', indexRouter);
 app.use('/uploads', express.static(config.blog.upload_path));
+
+// app.use(session({
+//   store: new (require('connect-pg-simple')(session))({
+//     // Insert connect-pg-simple options here
+//     pool: new pg.Pool(config.postgresql)
+//   }),
+//   secret: config.cookie_secret,
+//   resave: false,
+//   saveUninitialized: true,
+//   cookie: { maxAge: 30 * 24 * 60 * 60 * 1000 } // 30 days
+//   // Insert express-session options here
+// }));
+
+
+
+app.use(expressSession({
+  store: new pgSession({
+    pool: pgPool,                // Connection pool
+    tableName : 'user_sessions'   // Use another table-name than the default "session" one
+    // Insert connect-pg-simple options here
+  }),
+  secret: config.cookie_secret,
+  resave: false,
+  saveUninitialized: true,
+  cookie: { maxAge: 30 * 24 * 60 * 60 * 1000 } // 30 days
+  // Insert express-session options here
+}));
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

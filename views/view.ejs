@@ -45,29 +45,24 @@
       
       <!--jumbotron-->
       <section class="jumbotron-wrap">
-       
+        <div class="jumbotron" style="background-image: url('<%- data[0].cover_image_url %>')">
         <% if (data[0].cover_type === 'video') { %>
-            <div class="jumbotron">
             <video class="w-100" autoplay="" muted="" loop="" >
                 <source src="<%- data[0].cover_video_url %>" type="video/mp4">
             </video>
-            </div>
-        <% } else { %>
-            <div class="jumbotron" style="background-image: url('<%- data[0].cover_image_url %>')">
         <% } %>
-        
             <div class="row">
-            <div class="col">
-                <h5 class="feature-heading"><span class="badge bg-light" style="font-size: .8rem;"><%- data[0].name_ko %></span></h5>
-                <h1 class="entry-title">
-                    <a href="#"><%- data[0].title %></a>
-                </h1>
-                <p class="entry-meta">
-                    <span class="entry-author">
-                        <a title="Posts by Feature Shoot" rel="author">하나금융파인드</a>
-                    </span>• <%- data[0].dt_interval %>
-                </p>
-            </div>
+              <div class="col">
+                  <h5 class="feature-heading"><span class="badge bg-light" style="font-size: .8rem;"><%- data[0].name_ko %></span></h5>
+                  <h1 class="entry-title">
+                      <a href="#"><%- data[0].title %></a>
+                  </h1>
+                  <p class="entry-meta">
+                      <span class="entry-author">
+                          <a title="Posts by Feature Shoot" rel="author">하나금융파인드</a>
+                      </span>• <%- data[0].dt_interval %>
+                  </p>
+              </div>
             </div>
             <div class="jumbotron-overlay"></div>
         </div>

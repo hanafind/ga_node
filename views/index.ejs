@@ -52,14 +52,12 @@
             <!-- Slides -->
             <% for(var i=0; i<data_recommand.length; i++) { %>
               <div class="swiper-slide">
-                <% if (data_recommand[i].cover_type === 'video') { %>
-                  <div class="jumbotron">
+                  <div class="jumbotron" style="background-image: url('<%- data_recommand[i].cover_image_url %>');">
+                    <% if (data_recommand[i].cover_type === 'video') { %>
                   <video class="w-100" autoplay="" muted="" loop="" style="object-fit: cover;">
                     <source src="<%- data_recommand[i].cover_video_url %>" type="video/mp4">
                   </video>
-                <% } else { %>
-                  <div class="jumbotron" style="background-image: url('<%- data_recommand[i].cover_image_url %>');">
-                <% } %>
+                  <% } %>
                     <div class="row">
                       <div class="col">
                           <h5 class="feature-heading">추천 포스트</h5>
@@ -79,7 +77,6 @@
                     <div class="jumbotron-overlay"></div>
                   </div>
                 </div>
-              </div>
             <% } %>
             
           </div>

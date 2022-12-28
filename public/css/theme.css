@@ -3703,7 +3703,7 @@ textarea.form-control-lg {
   --si-navbar-padding-x: 0;
   --si-navbar-padding-y: 0.5rem;
   --si-navbar-color: #33354d;
-  --si-navbar-hover-color: #6366f1;
+  --si-navbar-hover-color: #009090;
   --si-navbar-disabled-color: #9397ad;
   --si-navbar-active-color: #6366f1;
   --si-navbar-brand-padding-y: 0.5rem;
@@ -4495,8 +4495,8 @@ textarea.form-control-lg {
   --si-pagination-focus-bg: #eff2fc;
   --si-pagination-focus-box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.25);
   --si-pagination-active-color: #fff;
-  --si-pagination-active-bg: #6366f1;
-  --si-pagination-active-border-color: #6366f1;
+  --si-pagination-active-bg: #009090;
+  --si-pagination-active-border-color: #009090;
   --si-pagination-disabled-color: #9397ad;
   --si-pagination-disabled-bg: transparent;
   --si-pagination-disabled-border-color: #e2e5f1;
@@ -11717,7 +11717,7 @@ body {
 :root {
   --si-user-selection-color: rgba(var(--si-primary-rgb), 0.22);
   --si-heading-link-color: #33354d;
-  --si-heading-link-hover-color: #6366f1;
+  --si-heading-link-hover-color: #009090;
 }
 
 a {
@@ -14489,7 +14489,7 @@ a.badge {
   --si-carousel-pagination-bullet-border-radius: 50rem;
   --si-carousel-pagination-bullet-bg: #b4b7c9;
   --si-carousel-pagination-bullet-active-width: 1.5rem;
-  --si-carousel-pagination-bullet-active-bg: #6366f1;
+  --si-carousel-pagination-bullet-active-bg: #009090;
   --si-carousel-pagination-progressbar-height: 0.1875rem;
   --si-carousel-pagination-progressbar-bg: #e2e5f1;
   --si-carousel-pagination-progressbar-fill-bg: #6366f1;

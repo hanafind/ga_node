@@ -2,11 +2,11 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8">
-    <title>하나금융파인드</title>
+    <title><%- data[0].meta_title %></title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="<%- data[0].meta_desc %>">
+    <meta name="keywords" content="<%- data[0].meta_keywords %>">
     <meta name="author" content="">
 
     <!-- Viewport -->
@@ -24,6 +24,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="/vendor/swiper/modules/zoom/zoom.css"/>
     <link rel="stylesheet" media="screen" href="/vendor/boxicons/css/boxicons.min.css"/>
     <link rel="stylesheet" media="screen" href="/vendor/swiper/swiper-bundle.min.css"/>
 

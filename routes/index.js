@@ -48,6 +48,7 @@ router.get("/blog/:category", async function (req, res) {
     var result = await modules.pg.query(sql, values);
 
     // 포스트 페이지 카운트
+    values = [result[0].category_idx];
     sql = mapper.sqlPostPageCount + ` and pcm.post_categories_idx = $1`;
 
     req.params.page = req.params.page !== undefined ? req.params.page : 1;
@@ -74,6 +75,8 @@ router.get("/blog/article/:url_slug", async function (req, res, next) {
     let sql = mapper.sqlPostView;
     let values = [req.params.url_slug];
     var result = await modules.pg.query(sql, values);
+
+    console.log('result : ' + JSON.stringify(result));
 
     // 연관 포스트
     sql =

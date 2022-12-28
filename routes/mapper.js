@@ -59,7 +59,7 @@ let sqlPostView =
     p.idx,
     pc.idx as category_idx, pc.name, pc.name_ko,
     p.title, p.contents, p.created_at, p.posting_date, p.audit_grant_start_date, p.audit_grant_end_date, p.is_visible,
-    p.cover_image_url, p.url_slug, p.cover_type, p.cover_video_url,` 
+    p.cover_image_url, p.url_slug, p.cover_type, p.cover_video_url, p.meta_title, p.meta_desc, p.meta_keywords,` 
    + sqlInterval 
    + ` FROM
         public.posts as p, public.posts_post_categories_map as pcm, public.post_categories as pc

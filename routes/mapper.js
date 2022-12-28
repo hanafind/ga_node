@@ -63,7 +63,7 @@ let sqlPostView =
    + sqlInterval 
    + ` FROM
         public.posts as p, public.posts_post_categories_map as pcm, public.post_categories as pc
-    where p.idx = $1
+    where p.url_slug = $1
         and p.idx = pcm.posts_idx
         AND pc.idx = pcm.post_categories_idx`;
 

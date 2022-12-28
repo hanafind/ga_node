@@ -47,7 +47,7 @@
       <section class="jumbotron-wrap">
         <div class="jumbotron" style="background-image: url('<%- data[0].cover_image_url %>')">
         <% if (data[0].cover_type === 'video') { %>
-            <video class="w-100" autoplay="" muted="" loop="" >
+            <video class="w-100 h-100" autoplay="" muted="" loop="" style="object-fit: cover;">
                 <source src="<%- data[0].cover_video_url %>" type="video/mp4">
             </video>
         <% } %>

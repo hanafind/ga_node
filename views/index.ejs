@@ -54,7 +54,7 @@
               <div class="swiper-slide">
                   <div class="jumbotron" style="background-image: url('<%- data_recommand[i].cover_image_url %>');">
                     <% if (data_recommand[i].cover_type === 'video') { %>
-                  <video class="w-100" autoplay="" muted="" loop="" style="object-fit: cover;">
+                  <video class="w-100 h-100" autoplay="" muted="" loop="" style="object-fit: cover;">
                     <source src="<%- data_recommand[i].cover_video_url %>" type="video/mp4">
                   </video>
                   <% } %>
@@ -62,7 +62,7 @@
                       <div class="col">
                           <h5 class="feature-heading">추천 포스트</h5>
                           <h1 class="entry-title">
-                              <a href="/view/<%- data_recommand[i].idx %>//<%- data_recommand[i].url_slug %>"><%- data_recommand[i].title %></a>
+                              <a href="/blog/article/<%- data_recommand[i].url_slug %>"><%- data_recommand[i].title %></a>
                           </h1>
                           <p class="entry-meta">
                               <span class="entry-author">

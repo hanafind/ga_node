@@ -24,13 +24,13 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Vendor Styles -->
-    <link rel="stylesheet" media="screen" href="vendor/swiper/modules/zoom/zoom.css"/>
-    <link rel="stylesheet" media="screen" href="vendor/boxicons/css/boxicons.min.css"/>
-    <link rel="stylesheet" media="screen" href="vendor/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" media="screen" href="/vendor/swiper/modules/zoom/zoom.css"/>
+    <link rel="stylesheet" media="screen" href="/vendor/boxicons/css/boxicons.min.css"/>
+    <link rel="stylesheet" media="screen" href="/vendor/swiper/swiper-bundle.min.css"/>
 
     <!-- Main Theme Styles + Bootstrap -->
-    <link rel="stylesheet" media="screen" href="css/theme.css">
-    <link rel="stylesheet" media="screen" href="css/theme-custom.css">
+    <link rel="stylesheet" media="screen" href="/css/theme.css">
+    <link rel="stylesheet" media="screen" href="/css/theme-custom.css">
 
   </head>
 
@@ -52,12 +52,19 @@
             <!-- Slides -->
             <% for(var i=0; i<data_recommand.length; i++) { %>
               <div class="swiper-slide">
-                <div class="jumbotron" style="background-image: url('<%- data_recommand[i].cover_image_url %>');">
+                <% if (data_recommand[i].cover_type === 'video') { %>
+                  <div class="jumbotron">
+                  <video class="w-100" autoplay="" muted="" loop="" style="object-fit: cover;">
+                    <source src="<%- data_recommand[i].cover_video_url %>" type="video/mp4">
+                  </video>
+                <% } else { %>
+                  <div class="jumbotron" style="background-image: url('<%- data_recommand[i].cover_image_url %>');">
+                <% } %>
                     <div class="row">
                       <div class="col">
                           <h5 class="feature-heading">추천 포스트</h5>
                           <h1 class="entry-title">
-                              <a href="view?idx=<%- data_recommand[i].idx %>"><%- data_recommand[i].title %></a>
+                              <a href="/view/idx=<%- data_recommand[i].idx %>//<%- data_recommand[i].url_slug %>"><%- data_recommand[i].title %></a>
                           </h1>
                           <p class="entry-meta">
                               <span class="entry-author">
@@ -70,6 +77,7 @@
                       </div>
                     </div>
                     <div class="jumbotron-overlay"></div>
+                  </div>
                 </div>
               </div>
             <% } %>
@@ -101,13 +109,13 @@
     <% include footer %>
     
     <!-- Vendor Scripts -->
-    <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src="vendor/jarallax/dist/jarallax.min.js"></script>
-    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="/vendor/swiper/swiper-bundle.min.js"></script>
 
     <!-- Main Theme Script -->
-    <script type="module" src="js/src/theme.js"></script>
+    <script type="module" src="/js/src/theme.js"></script>
     <script>
       const swiper = new Swiper('.swiper', {
         speed: 400,

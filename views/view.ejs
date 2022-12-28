@@ -24,12 +24,12 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Vendor Styles -->
-    <link rel="stylesheet" media="screen" href="vendor/boxicons/css/boxicons.min.css"/>
-    <link rel="stylesheet" media="screen" href="vendor/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" media="screen" href="/vendor/boxicons/css/boxicons.min.css"/>
+    <link rel="stylesheet" media="screen" href="/vendor/swiper/swiper-bundle.min.css"/>
 
     <!-- Main Theme Styles + Bootstrap -->
-    <link rel="stylesheet" media="screen" href="css/theme.css">
-    <link rel="stylesheet" media="screen" href="css/theme-custom.css">
+    <link rel="stylesheet" media="screen" href="/css/theme.css">
+    <link rel="stylesheet" media="screen" href="/css/theme-custom.css">
 
   </head>
 
@@ -45,7 +45,17 @@
       
       <!--jumbotron-->
       <section class="jumbotron-wrap">
-        <div class="jumbotron" style="background-image: url('<%- data[0].cover_image_url %>')">
+       
+        <% if (data[0].cover_type === 'video') { %>
+            <div class="jumbotron">
+            <video class="w-100" autoplay="" muted="" loop="" >
+                <source src="<%- data[0].cover_video_url %>" type="video/mp4">
+            </video>
+            </div>
+        <% } else { %>
+            <div class="jumbotron" style="background-image: url('<%- data[0].cover_image_url %>')">
+        <% } %>
+        
             <div class="row">
             <div class="col">
                 <h5 class="feature-heading"><span class="badge bg-light" style="font-size: .8rem;"><%- data[0].name_ko %></span></h5>
@@ -102,13 +112,13 @@
     </a>
 
     <!-- Vendor Scripts -->
-    <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src="vendor/jarallax/dist/jarallax.min.js"></script>
-    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="/vendor/swiper/swiper-bundle.min.js"></script>
 
     <!-- Main Theme Script -->
-    <script type="module" src="js/src/theme.js"></script>
+    <script type="module" src="/js/src/theme.js"></script>
     <script>
       const swiper = new Swiper('.swiper', {
         speed: 400,

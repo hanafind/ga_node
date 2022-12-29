@@ -6,9 +6,9 @@
     "start": "node ./bin/www",
     "node-sass": "node-sass",
     "sass": "node-sass -wr --source-map true node-sass public/stylesheets/style.scss",
-    "local": "cross-env NODE_ENV=local PORT=4000 pm2 start ./bin/www --name 'GA Potal Web' --watch",
-    "development": "cross-env NODE_ENV=development PORT=4101 pm2 start ./bin/www --name 'GA Potal Web'",
-    "production": "cross-env NODE_ENV=production PORT=4101 pm2 start ./bin/www --name 'GA Potal Web'"
+    "local": "cross-env NODE_ENV=local PORT=4000 pm2 start ./bin/www --name 'GA_Potal_Web' --watch",
+    "development": "cross-env NODE_ENV=development PORT=4101 pm2 start ./bin/www --name 'GA_Potal_Web'",
+    "production": "cross-env NODE_ENV=production PORT=4101 pm2 start ./bin/www --name 'GA_Potal_Web'"
   },
   "dependencies": {
     "connect-pg-simple": "^8.0.0",

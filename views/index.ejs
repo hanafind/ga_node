@@ -54,7 +54,7 @@
               <div class="swiper-slide">
                   <div class="jumbotron" style="background-image: url('<%- data_recommand[i].cover_image_url %>');">
                     <% if (data_recommand[i].cover_type === 'video') { %>
-                  <video class="w-100 h-100" poster="<%- data_recommand[i].cover_image_url %>" autoplay="" muted="" loop="" style="object-fit: cover;">
+                  <video class="w-100 h-100" poster="<%- data_recommand[i].cover_image_url %>" autoplay muted loop playsinline style="object-fit: cover;">
                     <source src="<%- data_recommand[i].cover_video_url %>" type="video/mp4">
                   </video>
                   <% } %>

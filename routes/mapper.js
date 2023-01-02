@@ -1,6 +1,6 @@
 // 카테고리 정보
 let sqlCategory = 
-`select pc.idx, pc.name. pc.name_ko from post_categories pc`;
+`select pc.idx, pc.name. pc.name_ko from blog.post_categories pc`;
 
 // 시간
 let sqlInterval = 
@@ -20,7 +20,7 @@ let sqlPostList =
         p.title, regexp_replace(p.contents, E'<[^>]+>', '', 'gi') as contents, p.created_at, p.posting_date, p.audit_grant_start_date, p.audit_grant_end_date, p.is_visible,
         p.cover_image_url, p.url_slug, p.cover_type, p.cover_video_url, `
 + sqlInterval
-+ ` from public.posts as p, public.posts_post_categories_map as pcm, public.post_categories as pc
++ ` from blog.posts as p, blog.posts_post_categories_map as pcm, blog.post_categories as pc
     where p.idx = pcm.posts_idx
     AND pc.idx = pcm.post_categories_idx
     AND p.is_visible = true `;
@@ -33,7 +33,7 @@ pc.idx as category_idx, pc.name, pc.name_ko, p.url_slug, p.cover_type, p.cover_v
 p.title, regexp_replace(p.contents, E'<[^>]+>', '', 'gi') as contents, p.cover_image_url, p.created_at, p.posting_date, p.audit_grant_start_date, p.audit_grant_end_date, p.is_visible,`
 + sqlInterval
 +` FROM
-    public.posts as p, public.posts_post_categories_map as pcm, public.post_categories as pc, public.post_recommends as pr
+    blog.posts as p, blog.posts_post_categories_map as pcm, blog.post_categories as pc, blog.post_recommends as pr
 WHERE
     p.idx = pcm.posts_idx
     AND p.idx = pr.posts_idx
@@ -47,7 +47,7 @@ let sqlPostPageCount =
         ELSE COUNT(1)/9
         END AS pageCnt
 FROM
-    public.posts AS p, public.posts_post_categories_map AS pcm, public.post_categories AS pc
+    blog.posts AS p, blog.posts_post_categories_map AS pcm, blog.post_categories AS pc
 WHERE
     p.idx = pcm.posts_idx
     AND pc.idx = pcm.post_categories_idx
@@ -62,7 +62,7 @@ let sqlPostView =
     p.cover_image_url, p.url_slug, p.cover_type, p.cover_video_url, p.meta_title, p.meta_desc, p.meta_keywords,` 
    + sqlInterval 
    + ` FROM
-        public.posts as p, public.posts_post_categories_map as pcm, public.post_categories as pc
+        blog.posts as p, blog.posts_post_categories_map as pcm, blog.post_categories as pc
     where p.url_slug = $1
         and p.idx = pcm.posts_idx
         AND pc.idx = pcm.post_categories_idx`;

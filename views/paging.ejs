@@ -7,11 +7,11 @@
       <% } else { %>
         <li class="page-item"></li>
       <% } %>
-        <a href="/<%- data_pageInfo[0].url %><%- i %>" class="page-link"><%- i %></a>
+        <a href="<%- data_pageInfo[0].url %>/<%- i %>" class="page-link"><%- i %></a>
       </li>
     <% } %>
     <li class="page-item">
-      <a href="/<%- data_pageInfo[0].url %><%- data_pageInfo[0].pagecnt %>" class="page-link">
+      <a href="<%- data_pageInfo[0].url %>/<%- data_pageInfo[0].pagecnt %>" class="page-link">
         <i class="bx bx-chevron-right mx-n1"></i>
       </a>
     </li>

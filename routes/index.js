@@ -24,7 +24,7 @@ router.get(["/", "/:page"], async function (req, res) {
     sql = mapper.sqlPostPageCount;
     var result3 = await modules.pg.query(sql);
     result3[0].currentPage = req.params.page;
-    // result3[0].url = '?page=';
+    // result3[0].url = '/';
 
     res.render("index", {
       title: "홈",
@@ -38,7 +38,7 @@ router.get(["/", "/:page"], async function (req, res) {
 });
 
 /* GET categories page. */
-router.get("/blog/:category", async function (req, res) {
+router.get(["/blog/:category", "/blog/:category/:page"], async function (req, res) {
   try {
     let sql =
       mapper.sqlPostList +
@@ -56,7 +56,7 @@ router.get("/blog/:category", async function (req, res) {
     var result2 = await modules.pg.query(sql, values);
 
     result2[0].currentPage = req.params.page;
-    result2[0].url = "/blog/" + req.params.category + "/:page";
+    result2[0].url = "/blog/" + req.params.category;
 
     res.render("categories", {
       title: "카테고리",
@@ -69,14 +69,12 @@ router.get("/blog/:category", async function (req, res) {
 });
 
 /* GET article page. */
-router.get("/blog/article/:url_slug", async function (req, res, next) {
+router.get("/article/:url_slug", async function (req, res) {
   try {
     // 포스트 상세
     let sql = mapper.sqlPostView;
     let values = [req.params.url_slug];
     var result = await modules.pg.query(sql, values);
-
-    console.log('result : ' + JSON.stringify(result));
 
     // 연관 포스트
     sql =

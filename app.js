@@ -25,6 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/blog', indexRouter);
+app.use('/article', indexRouter);
 app.use('/uploads', express.static(config.blog.upload_path));
 
 

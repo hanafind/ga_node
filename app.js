@@ -32,10 +32,11 @@ app.use('/uploads', express.static(config.blog.upload_path));
 app.use(expressSession({
   store: new pgSession({
     pool: pgPool,                // Connection pool
+    schemaName: 'session',
     tableName : 'user_sessions'   // Use another table-name than the default "session" one
     // Insert connect-pg-simple options here
   }),
-  secret: config.cookie_secret,
+  secret: "hanafind2023blog!@#$",
   resave: false,
   saveUninitialized: true,
   cookie: { maxAge: 30 * 24 * 60 * 60 * 1000 } // 30 days

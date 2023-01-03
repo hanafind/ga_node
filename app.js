@@ -10,6 +10,7 @@ const pgSession = require('connect-pg-simple')(expressSession);
 const pgPool = new pg.Pool(config.postgresql);
 
 var indexRouter = require('./routes/index');
+var blogRouter = require('./routes/blog');
 
 var app = express();
 
@@ -24,8 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/blog', indexRouter);
-app.use('/article', indexRouter);
+app.use('/blog', blogRouter);
 app.use('/uploads', express.static(config.blog.upload_path));
 
 

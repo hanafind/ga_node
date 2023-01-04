@@ -2,13 +2,23 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8">
-    <title><%- data[0].meta_title %></title>
+    <title><%- data[0].title %></title>
 
     <!-- SEO Meta Tags -->
     <meta name="description" content="<%- data[0].meta_desc %>">
     <meta name="keywords" content="<%- data[0].meta_keywords %>">
-    <meta name="author" content="">
-
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="<%- data[0].meta_title %>">
+    <meta property="og:description" content="<%- data[0].meta_desc %>">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="하나금융파인드 하나공감">
+    <meta name="twitter:creator" content="하나금융파인드">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<%- data[0].meta_title %>"> 
+    <meta name="twitter:description" content="<%- data[0].meta_desc %>"> 
+    
+    
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -102,30 +112,7 @@
     </a>
 
     <!-- Vendor Scripts -->
-    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src="/assets/vendor/jarallax/dist/jarallax.min.js"></script>
-    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Main Theme Script -->
-    <script type="module" src="/assets/js/src/theme.js"></script>
-    <script>
-      const swiper = new Swiper('.swiper', {
-        speed: 400,
-        loop : true,
-        pagination: {
-          el: ".swiper-pagination",
-          type : 'bullets',
-          clickable: true
-        },
-        autoplay: {
-          delay: 3000,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        }
-      });
-    </script>
+    <script src="/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    
   </body>
 </html>

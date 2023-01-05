@@ -224,3 +224,66 @@
         font-size: .5rem !important;
     }
 }
+
+.color-blue{
+    color: var(--si-blue) !important;
+}
+.color-indigo{
+    color: var(--si-indigo) !important;
+}
+.color-purple{
+    color: var(--si-purple) !important;
+}
+.color-pink{
+    color: var(--si-pink) !important;
+}
+.color-red{
+    color: var(--si-red) !important;
+}
+.color-orange{
+    color: var(--si-orange) !important;
+}
+.color-yellow{
+    color: var(--si-yellow) !important;
+}
+.color-green{
+    color: var(--si-green) !important;
+}
+.color-teal{
+    color: var(--si-) !important;
+}
+.color-cyan{
+    color: var(--si-cyan) !important;
+}
+.color-black{
+    color: var(--si-black) !important;
+}
+.color-white{
+    color: var(--si-white) !important;
+}
+.color-gray{
+    color: var(--si-gray) !important;
+}
+
+.alert-noboder{
+    border: 0 !important;
+}
+.alert-inline{
+    display: inline-block !important;
+}
+.alert-s{
+    padding: .8rem;
+    font-size: .8rem;
+}
+.alert-xs{
+    padding: .6rem;
+    font-size: .6rem;
+}
+.alert-l{
+    padding: 1.2rem;
+    font-size: 1.2rem;
+}
+.alert-xl{
+    padding: 1.4rem;
+    font-size: 1.4rem;
+}

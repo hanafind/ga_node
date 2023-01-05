@@ -14,6 +14,10 @@ router.get('/sitemap.xml', async (req, res, next) => {
   res.send(fs.readFileSync('./sitemap.xml', 'utf8'));
 });
 
+router.get('/markup_guide', async (req, res, next) => {
+  res.render("markup_guide", {});
+});
+
 /* GET home page. */
 router.get(["/", "/:page"], async function (req, res) {
   try {

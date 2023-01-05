@@ -1,0 +1,23 @@
+<div class="col-md-4">
+    <div class="card">
+        <div class="card-media-wrap">
+            <div class="card-media">
+                <a href="/blog/article/<%- data[i].url_slug %>">
+        <% if (data[i].cover_type === 'video') { %>
+            <video class="card-img" autoplay muted loop playsinline style="object-fit: cover;">
+                <source src="<%- data[i].cover_video_url %>" type="video/mp4">
+            </video>
+        <% } else { %>
+            <img src="<%- data[i].cover_image_url %>" class="card-img" alt="Card image">
+        <% } %>
+                </a>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="card-catogory"><span class="badge bg-light"><%- data[i].name_ko %></span></div>
+            <h5 class="card-title"><a href="/blog/article/<%- data[i].url_slug %>"> <%- data[i].title %> </a></h5>
+            <p class="card-text fs-sm"><%= data[i].contents %></p>
+            <p class="card-date card-text fs-sm"><%- data[i].dt_interval %></p>
+        </div>
+    </div>
+</div>  

@@ -15,7 +15,8 @@ var blogRouter = require('./routes/blog');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', [path.join(__dirname, 'views'), path.join(__dirname, 'views/pages'), path.join(__dirname, 'views/layout')]);
+// app.set('views', [__dirname+'/views', __dirname+'/views/pages', __dirname+'/views/layout']);
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));

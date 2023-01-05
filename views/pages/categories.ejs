@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>하나금융파인드</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="보험, 금융, 라이프 관련 다양한 정보를 공유하고 공감하는 하나금융파인드입니다.">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="하나금융파인드 하나공감">
+    <meta property="og:description" content="보험, 금융, 라이프 관련 다양한 정보를 공유하고 공감하는 하나금융파인드입니다.">
+    
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="/assets/vendor/boxicons/css/boxicons.min.css"/>
+    <link rel="stylesheet" media="screen" href="/assets/vendor/swiper/swiper-bundle.min.css"/>
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="/assets/css/theme.css">
+    <link rel="stylesheet" media="screen" href="/assets/css/theme-custom.css">
+
+  </head>
+
+  <!-- Body -->
+  <body>
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+
+    <!-- Header -->
+     <%- include('header', {isPosition:false}) %>
+      
+      <section class="container posts-wrap pt-5 pb-3">
+        <h1 class="h3 mb-4"><%- data[0].name_ko %></h1>
+        <div class="row">
+          <% for(var i=0; i<data.length; i++) { %>
+            <% include card %>
+        <% } %>
+        </div>
+
+      <!-- Page -->
+      <% include paging %>
+
+      </section>
+
+    </main>
+
+   <!-- Footer -->
+   <% include footer %>
+  
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+    <!-- Vendor Scripts -->
+    <script src="/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title><%- data[0].title %></title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="<%- data[0].meta_desc %>">
+    <meta name="keywords" content="<%- data[0].meta_keywords %>">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="<%- data[0].meta_title %>">
+    <meta property="og:description" content="<%- data[0].meta_desc %>">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="하나금융파인드 하나공감">
+    <meta name="twitter:creator" content="하나금융파인드">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<%- data[0].meta_title %>"> 
+    <meta name="twitter:description" content="<%- data[0].meta_desc %>"> 
+    
+    
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="/assets/vendor/swiper/modules/zoom/zoom.css"/>
+    <link rel="stylesheet" media="screen" href="/assets/vendor/boxicons/css/boxicons.min.css"/>
+    <link rel="stylesheet" media="screen" href="/assets/vendor/swiper/swiper-bundle.min.css"/>
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="/assets/css/theme.css">
+    <link rel="stylesheet" media="screen" href="/assets/css/theme-custom.css">
+
+  </head>
+
+  <!-- Body -->
+  <body>
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+
+      <!-- Header -->
+      <%- include('header', {isPosition:true}) %>
+      
+      <!--jumbotron-->
+      <section class="jumbotron-wrap">
+        <div class="jumbotron" style="background-image: url('<%- data[0].cover_image_url %>')">
+        <% if (data[0].cover_type === 'video') { %>
+            <video class="w-100 h-100" autoplay muted loop playsinline style="object-fit: cover;">
+                <source src="<%- data[0].cover_video_url %>" type="video/mp4">
+            </video>
+        <% } %>
+            <div class="row">
+              <div class="col">
+                  <h5 class="feature-heading"><span class="badge bg-light" style="font-size: .8rem;"><%- data[0].name_ko %></span></h5>
+                  <h1 class="entry-title">
+                      <a href="#"><%- data[0].title %></a>
+                  </h1>
+                  <p class="entry-meta">
+                      <span class="entry-author">
+                          <a title="Posts by Feature Shoot" rel="author">하나금융파인드</a>
+                      </span>• <%- data[0].dt_interval %>
+                  </p>
+              </div>
+            </div>
+            <div class="jumbotron-overlay"></div>
+        </div>
+      </section>
+
+      <section class="container contents-html pt-5">
+        <%- data[0].contents %>
+
+        <% if (data[0].is_audit) { %>
+        <p class="fs-xs mt-5" style="font-size: .6rem !important;">
+            하나금융파인드(주) (보험대리점 등록번호:제2021040072호)<br>
+            본 광고는 광고심의기준을 준수하였으며, 유효기간은 심의일로부터 1년입니다.<br>
+            하나금융파인드 준법감시필 제<%- data[0].audit_num_index %>호(<%- data[0].audit_date %>)
+        </p>
+        <% } %>
+      </section>
+      
+      <section class="container posts-wrap pt-5 pb-3">
+        <div class="row">
+          <h4 class="h5 mb-4">연관 포스트</h4>
+          <% var data = JSON.parse(JSON.stringify(data_relation)); %>
+          <% for(var i=0; i<data.length; i++) { %>
+            <% include card %>
+          <% } %>
+        </div>
+        <div class="row">
+          <h4 class="h5 mb-4">추천 포스트</h4>
+          <% var data = JSON.parse(JSON.stringify(data_recommand)); %>
+          <% for(var i=0; i<data.length; i++) { %>
+            <% include card %>
+          <% } %>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <!-- <% include footer %> -->
+   
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+    <!-- Vendor Scripts -->
+    <script src="/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    
+  </body>
+</html>

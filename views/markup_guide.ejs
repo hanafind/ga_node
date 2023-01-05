@@ -60,7 +60,7 @@
                 <li>사진은 Alt Tag를 추가해 주어야 합니다.</li>
                 <li>짧은 문장과 문단을 쓰는것이 좋습니다. (가독성)</li>
                 <li><a href="https://developers.google.com/search/docs/appearance/structured-data" target="_blank">스키마 마크업</a>(Schema Markup)을 사용하세요.</li>
-                <li>검색엔진의 SEO 가이드를 참고합니다. (<a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=ko" target="_blank">Google</a>, <a href="https://searchadvisor.naver.com/guide/seo-help" target="_blank">Naver</a>)</li>
+                <li>이외 검색엔진의 SEO 가이드를 참고합니다. (<a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=ko" target="_blank">Google</a>, <a href="https://searchadvisor.naver.com/guide/seo-help" target="_blank">Naver</a>)</li>
               </ul>
           </section>
   
@@ -905,6 +905,44 @@
               </div>
             </div>
         </section>
+
+
+        <!-- youtube ratio -->
+        <section id="youtube" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">유투브: 16:9</h2>
+            <div class="d-table">
+              <ul class="nav nav-tabs-alt" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#preview-youtube-ratio" data-bs-toggle="tab" role="tab" aria-controls="preview-youtube-ratio" aria-selected="true">
+                    <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                    Preview
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#html-youtube-ratio" data-bs-toggle="tab" role="tab" aria-controls="html-youtube-ratio" aria-selected="false">
+                    <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                    HTML
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-content pt-1">
+              <div class="tab-pane fade show active" id="preview-youtube-ratio" role="tabpanel">
+                <div class="video">
+                    <div class="video-ratio">
+                     <iframe src="https://www.youtube.com/embed/kR17qHKkkvk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                  </div>
+              </div>
+              <div class="tab-pane fade" id="html-youtube-ratio" role="tabpanel">
+                <pre class="line-numbers"><code class="lang-html">&lt;!-- emoji --&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/kR17qHKkkvk&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+              </div>
+            </div>
+        </section>
+
+
+
   
         </div>
       </main>
@@ -918,7 +956,7 @@
 
 
     <!-- Vendor Scripts -->
-    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="/assets/vendor/prismjs/components/prism-core.min.js"></script>

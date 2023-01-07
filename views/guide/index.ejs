@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>하나공감 컨텐츠 HTML 마크업 가이드</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="/assets/vendor/boxicons/css/boxicons.min.css"/>
+    <link rel="stylesheet" media="screen" href="/assets/vendor/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" media="screen" href="/assets/vendor/prismjs/themes/prism.css"/>
+    <link rel="stylesheet" media="screen" href="/assets/vendor/prismjs/plugins/toolbar/prism-toolbar.css"/>
+    <link rel="stylesheet" media="screen" href="/assets/vendor/prismjs/plugins/line-numbers/prism-line-numbers.css"/>
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="/assets/css/theme.css">
+    <link rel="stylesheet" media="screen" href="/assets/css/theme-custom.css">
+
+  </head>
+
+
+  <!-- Body -->
+  <body>
+    <!-- Page container -->
+    <main>
+        <div class="container-fluid px-xxl-5 px-lg-4 pt-4 pt-lg-5 pb-2 pb-lg-4">
+          
+          <!-- Page title -->
+          <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
+            <div class="me-4">
+              <h1 class="pb-1">하나공감 컨텐츠<br><span class="color-red">H</span><span class="color-yellow">T</span><span class="color-blue">M</span><span class="color-green">L</span> 마크업 가이드</h1>
+            </div>
+          </div>
+          <section id="type-headings" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">SEO를 고려한 HTML 작성 규칙</h2>
+            <ul>
+                <li>H1 태그는 딱 한번 쓰는것이 가장 좋습니다.</li>
+                <li>H2 태그는 서브 헤딩(sub-heading)에 쓰는것이 좋습니다.</li>
+                <li>인터널 링크(Internal Link)를 포함하는것이 좋습니다.</li>
+                <li>외부 링크(External Link)를 포함하는것이 좋습니다.</li>
+                <li>사진, 영상, 인포그래픽등 시각적인 요소를 포함하는것이 좋습니다.</li>
+                <li>사진은 Alt Tag를 추가해 주어야 합니다.</li>
+                <li>짧은 문장과 문단을 쓰는것이 좋습니다. (가독성)</li>
+                <li><a href="https://developers.google.com/search/docs/appearance/structured-data" target="_blank">스키마 마크업</a>(Schema Markup)을 사용하세요.</li>
+                <li>이외 검색엔진의 SEO 가이드를 참고합니다. (<a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=ko" target="_blank">Google</a>, <a href="https://searchadvisor.naver.com/guide/seo-help" target="_blank">Naver</a>)</li>
+              </ul>
+          </section>
+  
+          <%- include('./headings', {}); %>
+          <%- include('./headings_display', {}); %>
+          <%- include('./text_size', {}); %>
+          <%- include('./text_color', {}); %>
+          <%- include('./text_inline', {}); %>
+          <%- include('./blockquote', {}); %>
+          <%- include('./table', {}); %>
+          <%- include('./table_border', {}); %>
+          <%- include('./lists', {}); %>
+          <%- include('./list_nostyle', {}); %>
+          <%- include('./list_description', {}); %>
+          <%- include('./list_align', {}); %>
+          <%- include('./alert', {}); %>
+          <%- include('./alert_style', {}); %>
+          <%- include('./image_shapes', {}); %>
+          <%- include('./image_caption', {}); %>
+          <%- include('./emoji', {}); %>
+          <%- include('./youtube', {}); %>
+
+
+        
+
+
+
+  
+        </div>
+      </main>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/vendor/prismjs/components/prism-core.min.js"></script>
+    <script src="/assets/vendor/prismjs/components/prism-markup.min.js"></script>
+    <script src="/assets/vendor/prismjs/components/prism-clike.min.js"></script>
+    <script src="/assets/vendor/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="/assets/vendor/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    <script src="/assets/vendor/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="/assets/js/theme.min.js"></script>
+  </body>
+</html>

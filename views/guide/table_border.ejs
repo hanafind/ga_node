@@ -1,0 +1,173 @@
+<!-- Bordered table -->
+<section id="tables-bordered" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+    <h2 class="h4">테이블: 선이 있는</h2>
+    <div class="d-table">
+      <ul class="nav nav-tabs-alt" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" href="#preview-tables-bordered" data-bs-toggle="tab" role="tab" aria-controls="preview-tables-bordered" aria-selected="true">
+            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+            Preview
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#html-tables-bordered" data-bs-toggle="tab" role="tab" aria-controls="html-tables-bordered" aria-selected="false">
+            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+            HTML
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-content pt-1">
+      <div class="tab-pane fade show active" id="preview-tables-bordered" role="tabpanel">
+        <div class="table-responsive mb-3">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Position</th>
+                <th>Phone</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>John</td>
+                <td>Doe</td>
+                <td>CEO, Founder</td>
+                <td>+3 555 68 70</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Anna</td>
+                <td>Cabana</td>
+                <td>Designer</td>
+                <td>+3 434 65 93</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Kale</td>
+                <td>Thornton</td>
+                <td>Developer</td>
+                <td>+3 285 42 88</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-dark table-bordered mb-0">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Position</th>
+                <th>Phone</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>John</td>
+                <td>Doe</td>
+                <td>CEO, Founder</td>
+                <td>+3 555 68 70</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Anna</td>
+                <td>Cabana</td>
+                <td>Designer</td>
+                <td>+3 434 65 93</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Kale</td>
+                <td>Thornton</td>
+                <td>Developer</td>
+                <td>+3 285 42 88</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="html-tables-bordered" role="tabpanel">
+        <pre class="line-numbers"><code class="lang-html">&lt;!-- Light bordered table --&gt;
+&lt;div class=&quot;table-responsive&quot;&gt;
+&lt;table class=&quot;table table-bordered&quot;&gt;
+&lt;thead;&gt;
+&lt;tr&gt;
+  &lt;th&gt;#&lt;/th&gt;
+  &lt;th&gt;First Name&lt;/th&gt;
+  &lt;th&gt;Last Name&lt;/th&gt;
+  &lt;th&gt;Position&lt;/th&gt;
+  &lt;th&gt;Phone&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+  &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+  &lt;td&gt;John&lt;/td&gt;
+  &lt;td&gt;Doe&lt;/td&gt;
+  &lt;td&gt;CEO, Founder&lt;/td&gt;
+  &lt;td&gt;+3 555 68 70&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+  &lt;td&gt;Anna&lt;/td&gt;
+  &lt;td&gt;Cabana&lt;/td&gt;
+  &lt;td&gt;Designer&lt;/td&gt;
+  &lt;td&gt;+3 434 65 93&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+  &lt;td&gt;Kale&lt;/td&gt;
+  &lt;td&gt;Thornton&lt;/td&gt;
+  &lt;td&gt;Developer&lt;/td&gt;
+  &lt;td&gt;+3 285 42 88&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;!-- Dark bordered table --&gt;
+&lt;div class=&quot;table-responsive&quot;&gt;
+&lt;table class=&quot;table table-dark table-bordered&quot;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+  &lt;th&gt;#&lt;/th&gt;
+  &lt;th&gt;First Name&lt;/th&gt;
+  &lt;th&gt;Last Name&lt;/th&gt;
+  &lt;th&gt;Position&lt;/th&gt;
+  &lt;th&gt;Phone&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+  &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+  &lt;td&gt;John&lt;/td&gt;
+  &lt;td&gt;Doe&lt;/td&gt;
+  &lt;td&gt;CEO, Founder&lt;/td&gt;
+  &lt;td&gt;+3 555 68 70&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+  &lt;td&gt;Anna&lt;/td&gt;
+  &lt;td&gt;Cabana&lt;/td&gt;
+  &lt;td&gt;Designer&lt;/td&gt;
+  &lt;td&gt;+3 434 65 93&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+  &lt;td&gt;Kale&lt;/td&gt;
+  &lt;td&gt;Thornton&lt;/td&gt;
+  &lt;td&gt;Developer&lt;/td&gt;
+  &lt;td&gt;+3 285 42 88&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </div>
+</section>

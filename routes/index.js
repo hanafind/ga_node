@@ -15,7 +15,7 @@ router.get('/sitemap.xml', async (req, res, next) => {
 });
 
 router.get('/markup_guide', async (req, res, next) => {
-  res.render("markup_guide", {});
+  res.render('guide/index', {});
 });
 
 /* GET home page. */

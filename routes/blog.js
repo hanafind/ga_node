@@ -38,19 +38,23 @@ router.get("/article/:url_slug", async function (req, res) {
 /* GET categories page. */
 router.get(["/:category", "/:category/:page"], async function (req, res) {
     try {
+      req.params.page = req.params.page !== undefined ? req.params.page : 1;
+
       let sql =
         mapper.sqlPostList +
         ` AND pc.name_ko = $1 
-              order by p.idx desc;`;
-      let values = [req.params.category];
+              order by p.idx desc
+              limit 9
+              offset ($2-1) * 9;`;
+      let values = [req.params.category, req.params.page];
+      
       var result = await modules.pg.query(sql, values);
   
       // 포스트 페이지 카운트
       values = [result[0].category_idx];
       sql = mapper.sqlPostPageCount + ` and pcm.post_categories_idx = $1`;
   
-      req.params.page = req.params.page !== undefined ? req.params.page : 1;
-      values = [req.params.page];
+      // values = [req.params.page];
       var result2 = await modules.pg.query(sql, values);
   
       result2[0].currentPage = req.params.page;

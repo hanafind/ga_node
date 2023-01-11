@@ -306,6 +306,7 @@ article{
     padding: 0 10px;
 }
 article p{
+    font-size: 1.125rem !important;
     margin-bottom: 2.4rem;
 }
 article .img-500{

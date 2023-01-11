@@ -318,3 +318,6 @@ article .img-600{
 article .img-700{
     width: 700px;
 }
+article ol, article ul {
+    padding-left: 1.5rem;
+}

@@ -287,22 +287,27 @@
     padding: 1.4rem;
     font-size: 1.4rem;
 }
-
-.video{
-    
-  }
-  .video-ratio{
-    height: 0;
-  /*  padding top은 부모 요소의 가로 요소에 영향을 받는다  */
-  /*  height는 반응형이 안되고 크기를 픽스해버리는 것임  */
-    padding-top: 56.25%;
-    position: relative;
-  }
-  .video-ratio iframe{
-    background: black;
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+.video-ratio{
+height: 0;
+/*  padding top은 부모 요소의 가로 요소에 영향을 받는다  */
+/*  height는 반응형이 안되고 크기를 픽스해버리는 것임  */
+padding-top: 56.25%;
+position: relative;
+}
+.video-ratio iframe{
+background: black;
+position: absolute;
+top:0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+article .img-500{
+    max-width: 500px;
+}
+article .img-600{
+    max-width: 600px;
+}
+article .img-700{
+    max-width: 700px;
+}

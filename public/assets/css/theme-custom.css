@@ -302,12 +302,15 @@ left: 0;
 width: 100%;
 height: 100%;
 }
+article{
+    padding: 10px 10px;
+}
 article .img-500{
-    max-width: 500px;
+    width: 500px;
 }
 article .img-600{
-    max-width: 600px;
+    width: 600px;
 }
 article .img-700{
-    max-width: 700px;
+    width: 700px;
 }

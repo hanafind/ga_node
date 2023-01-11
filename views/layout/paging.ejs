@@ -1,5 +1,10 @@
 <nav aria-label="Page navigation example">
   <ul class="pagination">
+    <li class="page-item">
+      <a href="<%- data_pageInfo[0].url %>/1" class="page-link">
+        <i class="bx bx-chevron-left mx-n1"></i>
+      </a>
+    </li>
     <% for(var i=1; i<=data_pageInfo[0].pagecnt; i++) { %>
       <% if (i == data_pageInfo[0].currentPage) { %>
         <li class="page-item active" aria-current="page">

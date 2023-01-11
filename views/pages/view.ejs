@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
+    <!-- Head -->
+    <% include head %>
+
     <meta charset="utf-8">
     <title><%- data[0].title %></title>
 
@@ -17,23 +20,6 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<%- data[0].meta_title %>"> 
     <meta name="twitter:description" content="<%- data[0].meta_desc %>"> 
-    
-    
-    <!-- Viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Favicon and Touch Icons -->
-    <link rel="shortcut icon" href="/assets/favicon.ico">
-
-    <!-- Vendor Styles -->
-    <link rel="stylesheet" media="screen" href="/assets/vendor/swiper/modules/zoom/zoom.css"/>
-    <link rel="stylesheet" media="screen" href="/assets/vendor/boxicons/css/boxicons.min.css"/>
-    <link rel="stylesheet" media="screen" href="/assets/vendor/swiper/swiper-bundle.min.css"/>
-
-    <!-- Main Theme Styles + Bootstrap -->
-    <link rel="stylesheet" media="screen" href="/assets/css/theme.css">
-    <link rel="stylesheet" media="screen" href="/assets/css/theme-custom.css">
-
   </head>
 
   <!-- Body -->
@@ -65,13 +51,27 @@
                           <a title="Posts by Feature Shoot" rel="author">하나금융파인드</a>
                       </span>• <%- data[0].dt_interval %>
                   </p>
+                  <a href="#" class="btn btn-icon btn-secondary btn-instagram btn-sm stretched-link">
+                    <i class="bx bxl-instagram"></i>
+                  </a>
+                  <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm stretched-link">
+                    <i class="bx bxl-facebook"></i>
+                  </a>
               </div>
             </div>
             <div class="jumbotron-overlay"></div>
         </div>
       </section>
 
+
+      <!-- <ul class="sns">
+        <li class="kakaotalk">
+        <a href="#n" id="btnKakao" onclick="fn_sendFB('kakaotalk', '<%- data[0].title %>');return false;" class="kakaotalk" target="_self" title="카카오톡 새창열림"><span class="skip">카카오톡</span></a>
+        </li>
+      </ul> -->
+
       <section class="container contents-html pt-5">
+        
         <%- data[0].contents %>
 
         <% if (data[0].is_audit) { %>
@@ -113,6 +113,34 @@
 
     <!-- Vendor Scripts -->
     <script src="/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+ 
+    <script >
+    function fn_sendFB(sns, title) {
+    var thisUrl = document.URL;
+    var snsTitle = title;
     
+      if( sns == 'kakaotalk' ) {
+          // 사용할 앱의 JavaScript 키 설정
+          Kakao.init('e7e265230c1ebceb56bb2f1ec4b6ae12');
+          
+          // 카카오링크 버튼 생성
+          Kakao.Link.createDefaultButton({
+              container: '#btnKakao', // HTML에서 작성한 ID값
+              objectType: 'feed',
+              content: {
+              title: title, // 보여질 제목
+              description: "보여질 설명 섦영 설명", // 보여질 설명
+              imageUrl: thisUrl, // 콘텐츠 URL
+              link: {
+                  mobileWebUrl: thisUrl,
+                  webUrl: thisUrl
+              }
+              }
+          });
+      }
+    }    
+    </script>
+
   </body>
 </html>

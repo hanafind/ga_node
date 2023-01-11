@@ -61,7 +61,7 @@ router.get(["/:category", "/:category/:page"], async function (req, res) {
       result2[0].url = "/blog/" + req.params.category;
   
       res.render("categories", {
-        title: "카테고리",
+        title: req.params.category,
         data: result,
         data_pageInfo: result2,
       });

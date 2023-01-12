@@ -288,19 +288,19 @@
     font-size: 1.4rem;
 }
 .video-ratio{
-height: 0;
-/*  padding top은 부모 요소의 가로 요소에 영향을 받는다  */
-/*  height는 반응형이 안되고 크기를 픽스해버리는 것임  */
-padding-top: 56.25%;
-position: relative;
+    height: 0;
+    /*  padding top은 부모 요소의 가로 요소에 영향을 받는다  */
+    /*  height는 반응형이 안되고 크기를 픽스해버리는 것임  */
+    padding-top: 56.25%;
+    position: relative;
 }
 .video-ratio iframe{
-background: black;
-position: absolute;
-top:0;
-left: 0;
-width: 100%;
-height: 100%;
+    background: black;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 article{
     padding: 0 10px;
@@ -319,5 +319,6 @@ article .img-700{
     width: 700px;
 }
 article ol, article ul {
+    margin: 0;
     padding-left: 1.5rem;
 }

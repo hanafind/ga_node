@@ -271,6 +271,10 @@
 .alert-inline{
     display: inline-block !important;
 }
+.alert-center{
+    display: table !important;
+    margin: 0 auto;
+}
 .alert-s{
     padding: .8rem;
     font-size: .8rem;

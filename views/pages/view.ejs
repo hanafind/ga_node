@@ -44,35 +44,29 @@
               <div class="col">
                   <h5 class="feature-heading"><span class="badge bg-light" style="font-size: .8rem;"><%- data[0].name_ko %></span></h5>
                   <h1 class="entry-title">
-                      <a href="#"><%- data[0].title %></a>
+                    <%- data[0].title %>
                   </h1>
                   <p class="entry-meta">
                       <span class="entry-author">
                           <a title="Posts by Feature Shoot" rel="author">하나금융파인드</a>
                       </span>• <%- data[0].dt_interval %>
                   </p>
-                  <a href="#" class="btn btn-icon btn-secondary btn-instagram btn-sm stretched-link">
-                    <i class="bx bxl-instagram"></i>
-                  </a>
-                  <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm stretched-link">
-                    <i class="bx bxl-facebook"></i>
-                  </a>
               </div>
             </div>
             <div class="jumbotron-overlay"></div>
         </div>
       </section>
 
-
-      <!-- <ul class="sns">
-        <li class="kakaotalk">
-        <a href="#n" id="btnKakao" onclick="fn_sendFB('kakaotalk', '<%- data[0].title %>');return false;" class="kakaotalk" target="_self" title="카카오톡 새창열림"><span class="skip">카카오톡</span></a>
-        </li>
-      </ul> -->
-
       <section class="container contents-html pt-5">
-        
+
         <%- data[0].contents %>
+
+        <div class="btn-group me-2">
+          <button id="btn_share" class="btn btn-secondary" onclick="fn_shareUrl();">
+            <i class="bx bx-share-alt fs-5 lh-1 me-2"></i>
+            공유하기
+          </button>
+        </div>
 
         <% if (data[0].is_audit) { %>
         <p class="fs-xs mt-5" style="font-size: .6rem !important;">
@@ -81,6 +75,7 @@
             하나금융파인드 준법감시필 제<%- data[0].audit_num_index %>호(<%- data[0].audit_date %>)
         </p>
         <% } %>
+
       </section>
       
       <section class="container posts-wrap pt-5 pb-3">
@@ -101,9 +96,12 @@
       </section>
 
     </main>
-
+    
     <!-- Footer -->
     <% include footer %>
+
+    <!-- Toast -->
+    <% include toast %>
    
     <!-- Back to top button -->
     <a href="#top" class="btn-scroll-top" data-scroll>
@@ -113,34 +111,18 @@
 
     <!-- Vendor Scripts -->
     <script src="/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
  
     <script >
-    function fn_sendFB(sns, title) {
-    var thisUrl = document.URL;
-    var snsTitle = title;
-    
-      if( sns == 'kakaotalk' ) {
-          // 사용할 앱의 JavaScript 키 설정
-          Kakao.init('e7e265230c1ebceb56bb2f1ec4b6ae12');
-          
-          // 카카오링크 버튼 생성
-          Kakao.Link.createDefaultButton({
-              container: '#btnKakao', // HTML에서 작성한 ID값
-              objectType: 'feed',
-              content: {
-              title: title, // 보여질 제목
-              description: "보여질 설명 섦영 설명", // 보여질 설명
-              imageUrl: thisUrl, // 콘텐츠 URL
-              link: {
-                  mobileWebUrl: thisUrl,
-                  webUrl: thisUrl
-              }
-              }
-          });
-      }
+    function fn_shareUrl() {
+      var dummy   = document.createElement("input");
+      var text    = decodeURIComponent(location.href);
+      document.body.appendChild(dummy);
+      dummy.value = text;
+      dummy.select();
+      document.execCommand("copy");
+      document.body.removeChild(dummy);
+      toast("주소가 복사되었습니다.");
     }    
     </script>
-
   </body>
 </html>

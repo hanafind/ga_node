@@ -1,0 +1,44 @@
+<div id="toast" ></div>
+
+<script >
+    function toast(string) {
+      let removeToast;
+      const toast = document.getElementById("toast");
+
+      toast.classList.contains("reveal") ?
+          (clearTimeout(removeToast), removeToast = setTimeout(function () {
+              document.getElementById("toast").classList.remove("reveal")
+          }, 2000)) :
+          removeToast = setTimeout(function () {
+              document.getElementById("toast").classList.remove("reveal")
+          }, 2000)
+          toast.classList.add("reveal"), toast.innerText = string, toast.removeAttribute("hidden")
+    }
+    </script>
+
+<style>
+    #toast {
+      position: fixed;
+      bottom: 50px;
+      left: 50%;
+      padding: 15px 20px;
+      transform: translate(-50%, 10px);
+      border-radius: 30px;
+      border-style: solid;
+      border-color: #565973;
+      overflow: hidden;
+      font-size: 1.0rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .5s, visibility .5s, transform .5s;
+      background: #fff ;
+      color: #000;
+      z-index: 10000;
+  }
+
+  #toast.reveal {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-50%, 0)
+  }
+  </style>

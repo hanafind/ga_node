@@ -309,6 +309,10 @@
 article{
     padding: 0 10px;
 }
+article table th{
+    text-align: center;
+    vertical-align: middle;
+}
 article p{
     font-size: 1.12rem !important;
     margin-bottom: 2.4rem;

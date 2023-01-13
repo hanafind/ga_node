@@ -309,7 +309,7 @@
 article{
     padding: 0 10px;
 }
-article table th{
+article table th, article table td{
     text-align: center;
     vertical-align: middle;
     white-space: nowrap;

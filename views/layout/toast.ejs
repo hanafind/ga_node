@@ -1,4 +1,4 @@
-<div id="toast" ></div>
+<div id="toast" hidden="true"></div>
 
 <script >
     function toast(string) {
@@ -19,19 +19,19 @@
 <style>
     #toast {
       position: fixed;
-      bottom: 50px;
+      bottom: 40px;
       left: 50%;
-      padding: 15px 20px;
+      padding: 10px 15px;
       transform: translate(-50%, 10px);
       border-radius: 30px;
       border-style: solid;
       border-color: #565973;
       overflow: hidden;
-      font-size: 1.0rem;
+      font-size: .8rem;
       opacity: 0;
       visibility: hidden;
       transition: opacity .5s, visibility .5s, transform .5s;
-      background: #fff ;
+      background: rgba(255, 255, 255, 0.75);
       color: #000;
       z-index: 10000;
   }

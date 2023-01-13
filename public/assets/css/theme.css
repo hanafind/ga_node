@@ -11722,7 +11722,7 @@ body {
 }
 
 a {
-  transition: color 0.2s ease-in-out;
+  transition: color 0.0s ease-in-out;
 }
 a:focus {
   outline: none;

@@ -16,7 +16,7 @@ router.get("/article/:url_slug", async function (req, res) {
         mapper.sqlPostList +
         `AND p.idx <> $1
           AND pcm.post_categories_idx = $2
-          ORDER BY p.idx desc 
+          ORDER BY p.posting_date desc 
           LIMIT 2;`;
       values = [result[0].idx, result[0].category_idx];
       var result2 = await modules.pg.query(sql, values);
@@ -43,7 +43,7 @@ router.get(["/:category", "/:category/:page"], async function (req, res) {
       let sql =
         mapper.sqlPostList +
         ` AND pc.name_ko = $1 
-              order by p.idx desc
+              order by p.posting_date desc
               limit 9
               offset ($2-1) * 9;`;
       let values = [req.params.category, req.params.page];

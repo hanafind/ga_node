@@ -63,7 +63,7 @@
   --si-black-rgb: 0, 0, 0;
   --si-body-color-rgb: 86, 89, 115;
   --si-body-bg-rgb: 255, 255, 255;
-  --si-font-sans-serif: "Manrope", sans-serif;
+  --si-font-sans-serif: "Noto Sans KR", "Manrope", sans-serif;
   --si-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --si-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --si-body-font-family: var(--si-font-sans-serif);

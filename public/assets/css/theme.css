@@ -11,11 +11,12 @@
   font-weight: normal;
   font-style: normal;
 }
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
-.text-gradient-primary {
-  background: linear-gradient(to right, #6366f1, #8B5CF6, #D946EF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/*Gmarket Sans*/
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('../fonts/NotoSansKR/NotoSansKR-Regular.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 :root {
@@ -62,7 +63,7 @@
   --si-black-rgb: 0, 0, 0;
   --si-body-color-rgb: 86, 89, 115;
   --si-body-bg-rgb: 255, 255, 255;
-  --si-font-sans-serif: "plex Sans", "Manrope", sans-serif;
+  --si-font-sans-serif: "Noto Sans KR", "Manrope", sans-serif;
   --si-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --si-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --si-body-font-family: var(--si-font-sans-serif);

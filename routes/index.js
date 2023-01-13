@@ -24,7 +24,7 @@ router.get(["/", "/:page"], async function (req, res) {
     // 포스트 목록
     let sql =
       mapper.sqlPostList +
-      ` order by p.posting_date
+      ` order by p.posting_date desc
     limit 9
     offset ($1-1) * 9;`;
     req.params.page = req.params.page !== undefined ? req.params.page : 1;

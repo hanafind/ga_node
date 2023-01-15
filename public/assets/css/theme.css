@@ -4589,7 +4589,7 @@ textarea.form-control-lg {
   color: var(--si-badge-color);
   text-align: center;
   white-space: nowrap;
-  vertical-align: baseline;
+  vertical-align: middle;
   border-radius: var(--si-badge-border-radius);
 }
 .badge:empty {

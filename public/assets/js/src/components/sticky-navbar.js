@@ -36,5 +36,3 @@ const stickyNavbar = (() => {
   }
 
 })();
-
-export default stickyNavbar;

@@ -58,6 +58,7 @@
     clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%);
     background-color: #0b0f19;
     opacity: .4;
+    z-index: 4;
 }
 .jumbotron .row{
     position: absolute;
@@ -117,13 +118,16 @@
         margin-bottom: .3rem !important;
     }
 }
-
+.jumbotron-cover-video{
+    position: absolute;
+    z-index: 2;
+}
 .jumbotron-cover-image{
     position: absolute;
-    width: 110%;
-    height: 110%;
-    top: -5%;
-    left: -5%;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -131,13 +135,14 @@
     animation-duration: 10s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    z-index: 1;
 }
 @-webkit-keyframes jumbotron-cover-zoom{
     from {
       transform:scale(1);
     }
     to {
-      transform:scale(.9);
+      transform:scale(.85);
     }
 }
 

@@ -45,6 +45,7 @@
     background-repeat: no-repeat !important;
     background-position: center bottom !important;
     color: #fff;
+    overflow: hidden;
 }
 .jumbotron-overlay{
     position: absolute;
@@ -114,6 +115,29 @@
     }
     .jumbotron .feature-heading, .jumbotron .entry-title, .jumbotron .entry-meta, .jumbotron .entry-excerpt, .jumbotron a{
         margin-bottom: .3rem !important;
+    }
+}
+
+.jumbotron-cover-image{
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    top: -5%;
+    left: -5%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    animation-name: jumbotron-cover-zoom;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes jumbotron-cover-zoom{
+    from {
+      transform:scale(1);
+    }
+    to {
+      transform:scale(.9);
     }
 }
 

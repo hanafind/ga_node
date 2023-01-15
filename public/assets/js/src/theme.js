@@ -11,4 +11,9 @@ const smoothScroll = (() => {
       updateURL: false
     });
   
-  })();
+})();
+
+window.addEventListener("scroll", (event) => {
+    const element = document.querySelector('.header-scroll div');
+    element.style.width = `${this.scrollY/(document.body.scrollHeight - window.innerHeight)*100}%`;
+});

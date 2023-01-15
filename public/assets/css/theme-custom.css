@@ -45,6 +45,20 @@ a{
         height: 22px;
     }
 }
+.navbar-stuck .header-scroll{
+    visibility: visible;
+}
+.header-scroll{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -3px;
+    visibility: hidden;
+}
+.header-scroll > div{
+    height: 3px;
+    background-color: #000;
+}
 /* pagination */
 .pagination .page-item.active a{
     color: #fff !important;

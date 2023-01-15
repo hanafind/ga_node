@@ -124,18 +124,22 @@
 }
 .jumbotron-cover-image{
     position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+.jumbotron-cover-image-zoom{
     width: 120%;
     height: 120%;
     top: -10%;
     left: -10%;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
     animation-name: jumbotron-cover-zoom;
     animation-duration: 10s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    z-index: 1;
 }
 @-webkit-keyframes jumbotron-cover-zoom{
     from {

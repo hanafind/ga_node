@@ -15,5 +15,5 @@ const smoothScroll = (() => {
 
 window.addEventListener("scroll", (event) => {
     const element = document.querySelector('.header-scroll div');
-    element.style.width = `${this.scrollY/(document.body.scrollHeight - window.innerHeight - 30)*100}%`;
+    element.style.width = `${this.scrollY/(document.body.scrollHeight - window.innerHeight - 50)*100}%`;
 });

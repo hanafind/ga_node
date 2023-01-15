@@ -52,11 +52,11 @@ a{
     position: absolute;
     width: 100%;
     left: 0;
-    bottom: -3px;
+    bottom: -2px;
     visibility: hidden;
 }
 .header-scroll > div{
-    height: 3px;
+    height: 2px;
     background-color: #000;
 }
 /* pagination */

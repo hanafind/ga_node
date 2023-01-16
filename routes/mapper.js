@@ -5,13 +5,18 @@ let sqlCategory =
 // 시간
 let sqlInterval = 
 `(select
-    case when now() - p.posting_date < '10 minute' then '방금전'
-        when now() - p.posting_date < '1 hour' then EXTRACT(MINUTE from now() - p.posting_date) || '분전'
-        when now() - p.posting_date < '1 day' then EXTRACT(HOUR from now() - p.posting_date) || '시간전'
-        when now() - p.posting_date < '31 day' then EXTRACT(DAY from now() - p.posting_date) || '일전'
-        else EXTRACT(MONTH from now() - p.posting_date +'1 month') || '달전'
+    case when now() - p.posting_date < '1 day' then '오늘'
+        else to_char(p.posting_date, 'yyyy. mm. dd')
         end 
   ) as dt_interval `;
+// `(select
+//     case when now() - p.posting_date < '10 minute' then '방금전'
+//         when now() - p.posting_date < '1 hour' then EXTRACT(MINUTE from now() - p.posting_date) || '분전'
+//         when now() - p.posting_date < '1 day' then EXTRACT(HOUR from now() - p.posting_date) || '시간전'
+//         when now() - p.posting_date < '31 day' then EXTRACT(DAY from now() - p.posting_date) || '일전'
+//         else EXTRACT(MONTH from now() - p.posting_date +'1 month') || '달전'
+//         end 
+//   ) as dt_interval `;
 
 // 포스트 목록
 let sqlPostList = 

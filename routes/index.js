@@ -4,6 +4,16 @@ const fs = require("fs");
 var modules = require("../modules");
 var mapper = require("./mapper.js");
 
+router.get(["/rss.xml", "/rss"], async function (req, res) {
+  let sql = mapper.sqlPostList +
+            ` order by p.posting_date desc
+            limit 20`;
+  var result = await modules.pg.query(sql);
+  var rssFeed = await modules.rss.generateFullContentFeed(result);
+  res.type('xml')
+  res.send(rssFeed.xml());
+});
+
 router.get(["/robots.txt"], async function (req, res) {
   res.type('txt');
   res.send(`User-agent: *\n${process.env.NODE_ENV == 'production'?'Allow':'Disallow'}: /`);

@@ -372,6 +372,10 @@ a{
 article{
     padding: 0 10px;
 }
+article a{
+    color: #009591 !important;
+    text-decoration: underline !important;
+}
 article table th, article table td{
     text-align: center;
     vertical-align: middle;

@@ -56,6 +56,8 @@ router.get(["/", "/:page"], async function (req, res) {
       data: result,
       data_recommand: result2,
       data_pageInfo: result3,
+      req: req,
+      res, res
     });
   } catch (err) {
     res.redirect("/");

@@ -13,13 +13,14 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="<%- data[0].meta_title %>">
     <meta property="og:description" content="<%- data[0].meta_desc %>">
-    <meta property="og:image" content="">
-    <meta property="og:url" content="">
+    <meta property="og:image" content="<%= req.protocol %>://<%= req.headers.host %><%= data[0].cover_image_urls.w720 %>">
+    <meta property="og:url" content="<%= req.protocol %>://<%= req.headers.host %><%= req.originalUrl %>">
     <meta property="og:site_name" content="하나금융파인드 하나공감">
     <meta name="twitter:creator" content="하나금융파인드">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="<%= req.protocol %>://<%= req.headers.host %><%= data[0].cover_image_urls.w720 %>">
     <meta name="twitter:title" content="<%- data[0].meta_title %>"> 
-    <meta name="twitter:description" content="<%- data[0].meta_desc %>"> 
+    <meta name="twitter:description" content="<%- data[0].meta_desc %>">
+    <link rel="canonical" href="<%= req.protocol %>://<%= req.headers.host %>/blog">
   </head>
 
   <!-- Body -->
@@ -28,14 +29,13 @@
     <!-- Page wrapper for sticky footer -->
     <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
     <main class="page-wrapper">
-
       <!-- Header -->
       <%- include('header', {isPosition:true}) %>
       
       <!--jumbotron-->
       <section class="jumbotron-wrap">
         <div class="jumbotron">
-            <div class="jumbotron-cover-image <%= data[0].cover_type === 'image'? 'jumbotron-cover-image-zoom':'' %>" style="background-image: url('<%- data[0].cover_image_url %>')"></div>
+            <div class="jumbotron-cover-image <%= data[0].cover_type === 'image'? 'jumbotron-cover-image-zoom':'' %>" style="background-image: url('<%- data[0].cover_image_urls.w1980 %>')"></div>
         <% if (data[0].cover_type === 'video') { %>
             <video class="jumbotron-cover-video w-100 h-100" autoplay muted loop playsinline style="object-fit: cover;">
                 <source src="<%- data[0].cover_video_url %>" type="video/mp4">

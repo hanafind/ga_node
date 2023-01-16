@@ -6,7 +6,6 @@ var mapper = require("./mapper.js");
 /* GET article page. */
 router.get("/article/:url_slug", async function (req, res) {
     try {
-      console.log(req.headers);
       // 포스트 상세
       let sql = mapper.sqlPostView;
       let values = [req.params.url_slug];

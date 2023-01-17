@@ -1,6 +1,8 @@
 var express = require("express");
 var router = express.Router();
 const fs = require("fs");
+const SitemapGenerator = require('sitemap-generator');
+
 var modules = require("../modules");
 var mapper = require("./mapper.js");
 
@@ -17,6 +19,27 @@ router.get(["/rss.xml", "/rss"], async function (req, res) {
 router.get(["/robots.txt"], async function (req, res) {
   res.type('txt');
   res.send(`User-agent: *\n${process.env.NODE_ENV == 'production'?'Allow':'Disallow'}: /`);
+});
+
+router.post('/sitemap', async (req, res, next) => {
+  // create generator
+  const generator = SitemapGenerator(`${req.protocol}://${req.headers.host}/`, {
+  stripQuerystring: false,
+  lastMod: true,
+  changeFreq: 'daily'
+  });
+
+  // register event listeners
+  generator.on('done', () => {
+      res.end(`sitemap created`);
+  });
+
+  generator.on('error', (error) => {
+      console.log(error);
+  });
+
+    // start the crawler
+  await generator.start();
 });
 
 router.get('/sitemap.xml', async (req, res, next) => {

@@ -8,7 +8,7 @@
                             <source src="<%- data[i].cover_video_url %>" type="video/mp4">
                         </video>
                     <% } else { %>
-                        <img src="<%= data[i].cover_image_urls.w720 ? data[i].cover_image_urls.w720 : data[i].cover_video_url %>" class="card-img" alt="Card image">
+                        <img src="<%= data[i].cover_image_urls.w720 ? data[i].cover_image_urls.w720 : data[i].cover_image_url %>" class="card-img" alt="Card image">
                     <% } %>
                     
                 </div>

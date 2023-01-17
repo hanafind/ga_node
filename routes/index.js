@@ -24,7 +24,7 @@ router.get(["/robots.txt"], async function (req, res) {
 router.post('/sitemap', async (req, res, next) => {
   // create generator
   //const generator = SitemapGenerator(`${req.protocol}://${req.headers.host}/`, {
-  const generator = SitemapGenerator(`https://hanafind.com/`, {
+  const generator = SitemapGenerator(`https://insure.hanafind.com/`, {
     stripQuerystring: false,
     lastMod: true,
     changeFreq: 'daily'

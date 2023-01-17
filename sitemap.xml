@@ -1,77 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.hanafind.com/</loc>
+    <loc>https://insure.hanafind.com/</loc>
     <lastmod>2023-01-17</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://www.hanafind.com/introduction/ceo-message/</loc>
+    <loc>https://insure.hanafind.com/blog/%EB%B3%B4%ED%97%98</loc>
     <lastmod>2023-01-17</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://www.hanafind.com/introduction/vision-mission/</loc>
+    <loc>https://insure.hanafind.com/blog/%EB%9D%BC%EC%9D%B4%ED%94%84</loc>
     <lastmod>2023-01-17</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://www.hanafind.com/introduction/ci/</loc>
+    <loc>https://insure.hanafind.com/blog/article/%EC%B9%98%EB%A7%A4%EC%A7%88%ED%99%98-%EC%98%88%EB%B0%A9-%EB%B0%8F-%EA%B0%9C%EC%84%A0-%EB%B0%A9%EB%B2%95</loc>
     <lastmod>2023-01-17</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://www.hanafind.com/business-area/life-consulting/</loc>
+    <loc>https://insure.hanafind.com/blog/article/test</loc>
     <lastmod>2023-01-17</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://www.hanafind.com/business-area/finance-consulting/</loc>
+    <loc>https://insure.hanafind.com/1</loc>
     <lastmod>2023-01-17</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://www.hanafind.com/recruitment/find-you/</loc>
+    <loc>https://insure.hanafind.com/blog/%EB%B3%B4%ED%97%98/1</loc>
     <lastmod>2023-01-17</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://www.hanafind.com/recruitment/benefits/</loc>
-    <lastmod>2023-01-17</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://www.hanafind.com/media/notice/</loc>
-    <lastmod>2023-01-17</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://www.hanafind.com/recruitment/apply/fc/</loc>
-    <lastmod>2023-01-17</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://www.hanafind.com/recruitment/apply/employee/</loc>
-    <lastmod>2023-01-17</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://www.hanafind.com/%ED%95%98%EB%82%98%EA%B8%88%EC%9C%B5%ED%8C%8C%EC%9D%B8%EB%93%9C%EC%A3%BC-%EC%A0%9C1%EA%B8%B0-%EC%9E%AC%EB%AC%B4%EC%83%81%ED%83%9C%ED%91%9C-%EA%B3%B5%EA%B3%A0/</loc>
-    <lastmod>2023-01-17</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://www.hanafind.com/recruit/%EC%98%81%EC%97%85%EA%B8%B0%ED%9A%8D-%EC%88%98%EC%88%98%EB%A3%8C%EC%A0%9C%EB%8F%84-%EC%9A%B4%EC%98%81-%EC%B1%84%EC%9A%A9/</loc>
-    <lastmod>2023-01-17</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://www.hanafind.com/wp-content/uploads/2022/03/%ED%95%98%EB%82%98%EA%B8%88%EC%9C%B5%ED%8C%8C%EC%9D%B8%EB%93%9C%EC%A3%BC_%EC%A0%9C1%EA%B8%B0-%EC%9E%AC%EB%AC%B4%EC%83%81%ED%83%9C%ED%91%9C-1.pdf</loc>
-    <lastmod>2022-03-24</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://www.hanafind.com/recruit/%ED%95%98%EB%82%98%EA%B8%88%EC%9C%B5%ED%8C%8C%EC%9D%B8%EB%93%9C-%EC%9D%B8%EC%9E%AC-%EC%B1%84%EC%9A%A9-2/</loc>
+    <loc>https://insure.hanafind.com/blog/%EB%9D%BC%EC%9D%B4%ED%94%84/1</loc>
     <lastmod>2023-01-17</lastmod>
     <changefreq>daily</changefreq>
   </url>

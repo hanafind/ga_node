@@ -5,7 +5,7 @@ let sqlCategory =
 // 시간
 let sqlInterval = 
 `(select
-    case when now() - p.posting_date < '1 day' then '오늘'
+    case when to_char(now(), 'yyyymmdd') = to_char(p.posting_date, 'yyyymmdd') then '오늘'
         else to_char(p.posting_date, 'yyyy. mm. dd')
         end 
   ) as dt_interval `;

@@ -23,10 +23,11 @@ router.get(["/robots.txt"], async function (req, res) {
 
 router.post('/sitemap', async (req, res, next) => {
   // create generator
-  const generator = SitemapGenerator(`${req.protocol}://${req.headers.host}/`, {
-  stripQuerystring: false,
-  lastMod: true,
-  changeFreq: 'daily'
+  //const generator = SitemapGenerator(`${req.protocol}://${req.headers.host}/`, {
+  const generator = SitemapGenerator(`https://hanafind.com/`, {
+    stripQuerystring: false,
+    lastMod: true,
+    changeFreq: 'daily'
   });
 
   // register event listeners

@@ -1587,7 +1587,7 @@ rimraf@^3.0.2:
 
 rss@^1.2.2:
   version "1.2.2"
-  resolved "https://registry.npmjs.org/rss/-/rss-1.2.2.tgz"
+  resolved "https://registry.yarnpkg.com/rss/-/rss-1.2.2.tgz#50a1698876138133a74f9a05d2bdc8db8d27a921"
   integrity sha512-xUhRTgslHeCBeHAqaWSbOYTydN2f0tAzNXvzh3stjz7QDhQMzdgHf3pfgNIngeytQflrFPfy6axHilTETr6gDg==
   dependencies:
     mime-types "2.1.13"

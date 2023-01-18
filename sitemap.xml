@@ -1,43 +1,232 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://insure.hanafind.com/</loc>
-    <lastmod>2023-01-17</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://insure.hanafind.com/blog/%EB%B3%B4%ED%97%98</loc>
-    <lastmod>2023-01-17</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://insure.hanafind.com/blog/%EB%9D%BC%EC%9D%B4%ED%94%84</loc>
-    <lastmod>2023-01-17</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://insure.hanafind.com/blog/article/%EC%B9%98%EB%A7%A4%EC%A7%88%ED%99%98-%EC%98%88%EB%B0%A9-%EB%B0%8F-%EA%B0%9C%EC%84%A0-%EB%B0%A9%EB%B2%95</loc>
-    <lastmod>2023-01-17</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://insure.hanafind.com/blog/article/test</loc>
-    <lastmod>2023-01-17</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://insure.hanafind.com/1</loc>
-    <lastmod>2023-01-17</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://insure.hanafind.com/blog/%EB%B3%B4%ED%97%98/1</loc>
-    <lastmod>2023-01-17</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://insure.hanafind.com/blog/%EB%9D%BC%EC%9D%B4%ED%94%84/1</loc>
-    <lastmod>2023-01-17</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://insure.hanafind.com/</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/insurance</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/finance</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/life</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/precautions-for-jeonse-loan</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/prepare-travel-insurance</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/child-insurance</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/parking-passbook-interest</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/winter-car-safety</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/death-coverage-matters</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/additional-special-agreement</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/preparing-for-retirement</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/national-pension-fund</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/cancer-coverage-matters</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/stock-per-pbr-roe</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/1</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/2</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/3</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/4</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/cancellation-rate-insurance</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/truth-about-ci-insurance</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/rate-pension-insurance</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/pension-savings-insurance</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/heart-disease-coverage</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/insurance/1</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/insurance/2</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/pension-savings-secrets</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/heir-required-information</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/minus-bankbook-know-how</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/finance/1</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/finance/2</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/improve-prostate-cancer</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/improve-heart-disease</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/dementia-disease-prevention</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/life/1</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/investment-dividend-stocks</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/Investing-in-dividend-stocks</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/house-rental-contract-renewal</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/pension-savings-fund</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/credit-card-revolving</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/minus-passbook-faq</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/refund-of-political-donations</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/medical-expense-coverage</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://insure.hanafind.com/blog/article/dementia-coverage-matters</loc>
+  <lastmod>2023-01-18T00:48:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>

@@ -61,14 +61,7 @@
       <section class="container contents-html pt-5">
         <div class="row">
             <div class="col-xl-9 col-lg-8">
-              <%- data[0].contents %>
-                  <div class="btn-group ms-2 mt-5 mb-5">
-                        <button id="btn_share" class="btn btn-secondary" onclick="fn_shareUrl();">
-                          <i class="bx bx-share-alt fs-5 lh-1 me-2"></i>
-                          공유하기
-                          </button>
-                    </div>
-        
+              <%- data[0].contents %>       
                     <% if (data[0].is_audit) { %>
                     <p class="fs-sm mt-5 ms-2">
                         하나금융파인드(주) (보험대리점 등록번호:제2021040072호)<br>
@@ -76,6 +69,12 @@
                         하나금융파인드 준법감시필 제<%- data[0].audit_num_year %>-<%- data[0].audit_num_month %>-<%- data[0].audit_num_index %>호(<%- data[0].audit_date %>)
                     </p>
                     <% } %>
+                    <div class="btn-group ms-2 mt-5 mb-5">
+                      <button id="btn_share" class="btn btn-secondary" onclick="fn_shareUrl();">
+                        <i class="bx bx-share-alt fs-5 lh-1 me-2"></i>
+                        공유하기
+                        </button>
+                    </div>
                 </div>
             <div class="col-xl-3 col-lg-4">
               <div class="card card-body mb-4">

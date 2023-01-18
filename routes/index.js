@@ -44,7 +44,7 @@ router.post('/sitemap', async (req, res, next) => {
 });
 
 router.get('/sitemap.xml', async (req, res, next) => {
-  res.set('xml');
+  res.type('xml');
   res.send(fs.readFileSync('./sitemap.xml', 'utf8'));
 });
 

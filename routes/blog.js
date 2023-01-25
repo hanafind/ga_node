@@ -48,7 +48,7 @@ router.get(["/:category"], async function (req, res) {
               order by p.posting_date desc
               limit 9
               offset ($2-1) * 9;`;
-      let values = [req.params.category, req.params.page];
+      let values = [req.params.category, req.query.page];
 
       // let sql = mapper.sqlPostList;
       // let sqlCategory = ` AND pc.name = ` + req.params.category;

@@ -52,17 +52,18 @@ router.get('/markup_guide', async (req, res, next) => {
   res.render('guide/index', {});
 });
 
+
 /* GET home page. */
-router.get(["/", "/:page"], async function (req, res) {
+router.get(["/", "/home"], async function (req, res) {
   try {
     // 포스트 목록
     let sql =
       mapper.sqlPostList +
       ` order by p.posting_date desc
     limit 9
-    offset ($1-1) * 9;`;
-    req.params.page = req.params.page !== undefined ? req.params.page : 1;
-    let values = [req.params.page];
+    offset ($1-1) * 9`;
+    req.query.page = req.query.page !== undefined ? req.query.page : 1;
+    let values = [req.query.page];
     var result = await modules.pg.query(sql, values);
 
     // 추천 포스트
@@ -72,8 +73,8 @@ router.get(["/", "/:page"], async function (req, res) {
     // 포스트 페이지 카운트
     sql = mapper.sqlPostPageCount;
     var result3 = await modules.pg.query(sql);
-    result3[0].currentPage = req.params.page;
-    // result3[0].url = '/';
+    result3[0].currentPage = req.query.page;
+    result3[0].url = "/home";
 
     res.render("index", {
       title: "홈",

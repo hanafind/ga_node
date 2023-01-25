@@ -24,7 +24,7 @@ router.get("/article/:url_slug", async function (req, res) {
       // 추천 포스트
       sql = mapper.sqlRecommandPost + ` LIMIT 2`;
       var result3 = await modules.pg.query(sql);
-      res.render("view", {
+      res.render("blog/view", {
         title: "상세",
         data: result,
         data_relation: result2,
@@ -38,9 +38,9 @@ router.get("/article/:url_slug", async function (req, res) {
   });
 
 /* GET categories page. */
-router.get(["/:category", "/:category/:page"], async function (req, res) {
+router.get(["/:category"], async function (req, res) {
     try {
-      req.params.page = req.params.page !== undefined ? req.params.page : 1;
+      req.query.page = req.query.page !== undefined ? req.query.page : 1;
 
       let sql =
         mapper.sqlPostList +
@@ -49,6 +49,12 @@ router.get(["/:category", "/:category/:page"], async function (req, res) {
               limit 9
               offset ($2-1) * 9;`;
       let values = [req.params.category, req.params.page];
+
+      // let sql = mapper.sqlPostList;
+      // let sqlCategory = ` AND pc.name = ` + req.params.category;
+              
+      // let values = [req.params.page, sqlCategory];
+
       
       var result = await modules.pg.query(sql, values);
   
@@ -59,10 +65,10 @@ router.get(["/:category", "/:category/:page"], async function (req, res) {
       // values = [req.params.page];
       var result2 = await modules.pg.query(sql, values);
   
-      result2[0].currentPage = req.params.page;
+      result2[0].currentPage = req.query.page;
       result2[0].url = "/blog/" + req.params.category;
   
-      res.render("categories", {
+      res.render("blog/categories", {
         title: req.params.category,
         data: result,
         data_pageInfo: result2,

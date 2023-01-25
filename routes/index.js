@@ -54,7 +54,7 @@ router.get('/markup_guide', async (req, res, next) => {
 
 
 /* GET home page. */
-router.get(["/", "/home"], async function (req, res) {
+router.get(["/"], async function (req, res) {
   try {
     // 포스트 목록
     let sql =
@@ -74,7 +74,6 @@ router.get(["/", "/home"], async function (req, res) {
     sql = mapper.sqlPostPageCount;
     var result3 = await modules.pg.query(sql);
     result3[0].currentPage = req.query.page;
-    result3[0].url = "/home";
 
     res.render("index", {
       title: "홈",

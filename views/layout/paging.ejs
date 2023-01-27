@@ -1,7 +1,7 @@
 <nav aria-label="Page navigation example">
   <ul class="pagination">
     <li class="page-item">
-      <a href="<%- data_pageInfo[0].url %>?page=1" class="page-link">
+      <a href="javascript:void(0)" onclick="javascript:location.href='<%- data_pageInfo[0].url %>?page=1'" class="page-link">
         <i class="bx bx-chevron-left mx-n1"></i>
       </a>
     </li>
@@ -12,11 +12,11 @@
       <% } else { %>
         <li class="page-item"></li>
       <% } %>
-        <a href="<%- data_pageInfo[0].url %>?page=<%- i %>" class="page-link"><%- i %></a>
+        <a href="javascript:void(0)" onclick="javascript:location.href='<%- data_pageInfo[0].url %>?page=<%- i %>'" class="page-link"><%- i %></a>
       </li>
     <% } %>
     <li class="page-item">
-      <a href="<%- data_pageInfo[0].url %>?page=<%- data_pageInfo[0].pagecnt %>" class="page-link">
+      <a href="javascript:void(0)" onclick="javascript:location.href='<%- data_pageInfo[0].url %>?page=<%- data_pageInfo[0].pagecnt %>'" class="page-link">
         <i class="bx bx-chevron-right mx-n1"></i>
       </a>
     </li>

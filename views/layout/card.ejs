@@ -5,7 +5,7 @@
                 <div class="card-media">  
                     <% if (data[i].cover_type === 'video') { %>
                         <video class="card-img" autoplay muted loop playsinline style="object-fit: cover;">
-                            <source src="<%- data[i].cover_video_url %>" type="video/mp4">
+                            <source poster="<%= data[i].cover_image_urls.w720 %>" src="<%- data[i].cover_video_url %>" type="video/mp4">
                         </video>
                     <% } else { %>
                         <img src="<%= data[i].cover_image_urls.w720 ? data[i].cover_image_urls.w720 : data[i].cover_image_url %>" class="card-img" alt="Card image">

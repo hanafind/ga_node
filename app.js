@@ -11,12 +11,12 @@ const pgPool = new pg.Pool(config.postgresql);
 
 var indexRouter = require('./routes/index');
 var blogRouter = require('./routes/blog');
+var faqRouter = require('./routes/faq');
 
 var app = express();
 
 // view engine setup
 app.set('views', [path.join(__dirname, 'views'), path.join(__dirname, 'views/pages'), path.join(__dirname, 'views/layout')]);
-// app.set('views', [__dirname+'/views', __dirname+'/views/pages', __dirname+'/views/layout']);
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
@@ -27,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/blog', blogRouter);
+app.use('/faq', faqRouter);
 app.use('/uploads', express.static(config.blog.upload_path));
 
 

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- Head -->
+    <% include head %>
+
+    <meta charset="utf-8" />
+    <title>하나금융파인드-자주하는 질문</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="보험, 금융, 라이프 관련 다양한 정보를 공유하고 공감하는 하나금융파인드입니다."
+    />
+    <meta property="og:type" content="blog" />
+    <meta property="og:title" content="하나금융파인드 하나공감" />
+    <meta
+      property="og:description"
+      content="보험, 금융, 라이프 관련 다양한 정보를 공유하고 공감하는 하나금융파인드입니다."
+    />
+  </head>
+  <body>
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+      <!-- Header -->
+      <%- include('header', {isPosition:false}) %>
+      <section class="container posts-wrap pt-5 pb-3">
+        <div class="col-md-9">
+          <div class="accordion" id="faq">
+            <h1 class="h3 mb-4">자주하는 질문</h1>
+
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a href="#" class="nav-link justify-content-center" data-bs-toggle="tab" role="tab">보험</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link justify-content-center" data-bs-toggle="tab" role="tab">금융</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link justify-content-center" data-bs-toggle="tab" role="tab">라이프</a>
+                </li>        
+            </ul>
+
+            <!-- Item -->
+            <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button accordion-icon-bg shadow-none rounded-3 collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#q-1"
+                  aria-expanded="false"
+                  aria-controls="q-1"
+                >
+                납입하는 보험료가 너무 많은 것 같습니다. 4인가족 보험료는 얼마나 납부해야 하나요?
+                </button>
+              </h3>
+              <div
+                class="accordion-collapse collapse"
+                id="q-1"
+                data-bs-parent="#faq"
+                style=""
+              >
+                <div class="accordion-body fs-sm pt-0">
+                  <p>
+                    보장성보험료는 일반적으로 월소득에 따라 기준을 잡습니다.
+                    4인가족 기준 맞벌이 합산으로 8~10% 이내로 준비하시는게 일반적이나,가족력, 가장의 사망리스크 대비등의 보장성보험이 추가 되어질 경우에는 부부합산 급여기준 10~12%까지도 고려하시는게 맞습니다.
+                    다만, 고객님의 재무상태에 따라 보험료의 적정성이 판단되어야 하기때문에 반드시 전문가와 상담을 통해 적절한 보험료 산출을 하시는 것을 추천드립니다.
+                  </p>
+                  <div class="btn-group">
+                    <button id="btn_share" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalConsult">
+                      <i class="bx bx-support fs-5 lh-1 me-2"></i>
+                      상담신청
+                      </button>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+
+            <!-- Item -->
+            <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button accordion-icon-bg shadow-none rounded-3 collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#q-2"
+                  aria-expanded="false"
+                  aria-controls="q-2"
+                >
+                월급은 한정적이고 노후준비도 힘든데 보험은 꼭 가입해야하나요?
+                </button>
+              </h3>
+              <div
+                class="accordion-collapse collapse"
+                id="q-2"
+                data-bs-parent="#faq"
+                style=""
+              >
+                <div class="accordion-body fs-sm pt-0">
+                  <p>
+                    노후준비도 힘든데 보험을 꼭 준비해야 할까요?
+
+                    대답은 &ldquo;예&rdquo;입니다.
+
+
+
+                    노후를 위해 저축을 하시는 부분은 정말 좋은 생각과 습관입니다.
+
+                    하지만 보험이 없는 상태에서 저축을 하신다면 위험에 노출된 상태로 저축을 하는 겁니다.
+
+                    아무리 매달 10만원, 100만원 저축을 한다 하더라도 10년, 20년 동안 아프지 않고 노후까지 저축을 하실 수 있으신가요?
+
+                    당신이 아픈 순간 매달 저축을 하던 금액은 병원비로 사라지게 됩니다.
+
+
+
+                    보험은 미래를 준비하기 위한 하나의 &lsquo;준비과정&rsquo;입니다.
+
+                    미래를 어떻게 준비하느냐에 따라 다르지만 건강은 누구도 예측할 수 없는 &lsquo;위험&rsquo;입니다.
+
+                    조금이라도 어릴 때 건강할 때 아프지 않을 때 미래를 위한 준비를 하셔야 합니다.
+
+                    90세 100세까지 보장을 받는 것과아프고 난 뒤에, 건강하지 못할 때 불안정하게 보험을 가입하는 것은 심리적으로나 경제적으로나 큰 타격이 있을 것을 확신합니다.
+
+                    꼼꼼한 보장을 받고 계신가요? 상담을 통해 나의 보장을 확인해보세요.
+                  </p>
+                  <div class="btn-group">
+                    <button id="btn_share" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalConsult">
+                      <i class="bx bx-support fs-5 lh-1 me-2"></i>
+                      상담신청
+                      </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button accordion-icon-bg shadow-none rounded-3 collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#q-3"
+                    aria-expanded="false"
+                    aria-controls="q-3"
+                  >
+                  종신보험은 죽어야만 보험금을 받을 수 있는 보험인가요?
+                  </button>
+                </h3>
+                <div
+                  class="accordion-collapse collapse"
+                  id="q-3"
+                  data-bs-parent="#faq"
+                  style=""
+                >
+                  <div class="accordion-body fs-sm pt-0">
+                    <p>
+                        종신보험은 사망보험금을 주계약으로 하는 보험이 맞습니다.
+                       
+                        하지만 꼭 사망을 해야 받는 보험은 아닙니다.
+                        
+                        
+                        
+                        특약으로 아플 때 보장받을 수 있는 항목을 선택할 수도 있고,
+                        
+                        주계약으로 가입하신 사망보험금이 은퇴 이후에 더이상 필요없다고
+                        
+                        느끼실 경우에는 주계약으로 납입한 해지환급금으로 연금전환하여 사용할 수도 있습니다.
+                        
+                        
+                        
+                        또한, 왕성한 경제활동기에 사망에 대한 리스크 대비를 하면서 큰 질환에 걸렸을 때
+                        
+                        사망보험금에서 일부를 선지급받아 사용할 수 있는 종신보험 등도 있으니,
+                        
+                        전문가와 상담 후, 목적에 맞는 종신보험을 가입하시는 것을 추천드립니다.
+                    </p>
+                    <div class="btn-group">
+                      <button id="btn_share" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalConsult">
+                        <i class="bx bx-support fs-5 lh-1 me-2"></i>
+                        상담신청
+                        </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Item -->
+            <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button accordion-icon-bg shadow-none rounded-3 collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#q-4"
+                    aria-expanded="false"1
+                    aria-controls="q-4"
+                  >
+                  노후를 대비해서 연금보험을 가입하려고 합니다. 종류가 너무 많은데, 어떤 연금보험을 가입해야 하나요?
+                  </button>
+                </h3>
+                <div
+                  class="accordion-collapse collapse"
+                  id="q-4"
+                  data-bs-parent="#faq"
+                  style=""
+                >
+                  <div class="accordion-body fs-sm pt-0">
+                    <p>
+                        연금보험은 세제혜택방식에 따라 세액공제, 비과세 상품으로 나눌 수 있고
+
+                        이자부리방식에 따라 공시이율, 변액투자 상품으로 나눌 수 있습니다.
+
+                        첫번째, 세제혜택방식에 따라 세액공제가 되는 &#39;연금저축보험&#39; 상품을 선택하신다면
+
+                        연말정산시에 최대 16.5%까지 세액공제 혜택을 받으실 수 있지만
+
+                        연금수령시에 3.3~5.5% 연금소득세를 내게 됩니다.
+
+                        만약 비과세가 되는 &#39;연금보험&#39; 상품을 선택하시면 세액공제의 혜택은 없지만,
+
+                        10년이상 유지하였을 경우 15.4%의 이자소득세 감면혜택을 받을 수 있습니다.
+
+                        두번째, 이자부리방식에 따라 이자가 다소 낮더라도 안정적인 이자를 부리받기를 원하신다면 공시 이율형 연금보험 상품을 선택하실 수 있고,
+
+                        원금손실의 우려가 있더라도 많은 이자를 부리받기를 원하신다면 변액 (투자)연금 상품을 선택하실 수 있습니다.
+                    </p>
+                    <div class="btn-group">
+                      <button id="btn_share" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalConsult">
+                        <i class="bx bx-support fs-5 lh-1 me-2"></i>
+                        상담신청
+                        </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <% include footer %>
+
+    <!-- Consult -->
+    <% include consult %>
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+    <!-- Vendor Scripts -->
+    <script src="/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="/assets/js/src/components/sticky-navbar.js"></script>
+    <script src="/assets/js/src/components/scroll-top-button.js"></script>
+
+    <script src="/assets/js/src/theme.js"></script>
+  </body>
+</html>

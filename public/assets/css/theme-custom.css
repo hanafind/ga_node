@@ -405,3 +405,8 @@ article ol, article ul {
     margin: 0;
     padding-left: 1.5rem;
 }
+
+.accordion-icon-bg {
+    --si-accordion-btn-icon-box-bg: #f3f6ff;
+    --si-accordion-btn-icon-box-active-bg: #009090;
+}

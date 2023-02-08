@@ -49,13 +49,6 @@ router.get(["/:category"], async function (req, res) {
               limit 9
               offset ($2-1) * 9;`;
       let values = [req.params.category, req.query.page];
-
-      // let sql = mapper.sqlPostList;
-      // let sqlCategory = ` AND pc.name = ` + req.params.category;
-              
-      // let values = [req.params.page, sqlCategory];
-
-      
       var result = await modules.pg.query(sql, values);
   
       // 포스트 페이지 카운트

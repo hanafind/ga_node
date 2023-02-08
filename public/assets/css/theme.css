@@ -3622,7 +3622,7 @@ textarea.form-control-lg {
   --si-nav-tabs-border-radius: 0.375rem;
   --si-nav-tabs-link-hover-border-color: transparent;
   --si-nav-tabs-link-active-color: #fff;
-  --si-nav-tabs-link-active-bg: #6366f1;
+  --si-nav-tabs-link-active-bg: #009090;
   --si-nav-tabs-link-active-border-color: transparent;
   border-bottom: var(--si-nav-tabs-border-width) solid var(--si-nav-tabs-border-color);
 }
@@ -3644,7 +3644,7 @@ textarea.form-control-lg {
 }
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: var(--si-nav-tabs-link-active-color);
+  color: var(--si-nav-tabs-link-active-color) !important;
   background-color: var(--si-nav-tabs-link-active-bg);
   border-color: var(--si-nav-tabs-link-active-border-color);
 }

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- Head -->
+    <% include head %>
+
+    <meta charset="utf-8" />
+    <title>하나금융파인드-자주하는 질문</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="보험, 금융, 라이프 관련 다양한 정보를 공유하고 공감하는 하나금융파인드입니다."
+    />
+    <meta property="og:type" content="blog" />
+    <meta property="og:title" content="하나금융파인드 하나공감" />
+    <meta
+      property="og:description"
+      content="보험, 금융, 라이프 관련 다양한 정보를 공유하고 공감하는 하나금융파인드입니다."
+    />
+  </head>
+  <body>
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+      <!-- Header -->
+      <%- include('header', {isPosition:false}) %>
+      <section class="container contents-html pt-5 pb-3">
+        <div class="row">
+            <div class="col-xl-9 col-lg-8">
+                <h1 class="h3 mb-4">자주하는 질문</h1>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a href="#insurance" class="nav-link active" data-bs-toggle="tab" role="tab">보험</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#finance" class="nav-link" data-bs-toggle="tab" role="tab">금융</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#life" class="nav-link" data-bs-toggle="tab" role="tab">라이프</a>
+                    </li>        
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-9 col-lg-8">
+                <div class="accordion" id="faq">
+                    <!-- Item -->
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="insurance" role="tabpanel">
+                            <% for(let i=0; i<data.insurance.length; i++) { %>
+                                <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button accordion-icon-bg shadow-none rounded-3 collapsed"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#qi-<%- i %>"
+                                                aria-expanded="false"
+                                                aria-controls="qi-<%- i %>">
+                                                <%- data.insurance[i].qust_ctt %>
+                                        </button>
+                                    </h3>
+                                    <div
+                                        class="accordion-collapse collapse"
+                                        id="qi-<%- i %>"
+                                        data-bs-parent="#faq">
+                                        <div class="accordion-body fs-sm pt-0">
+                                        <p> <%- data.insurance[i].answ_ctt %> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% } %>
+                        </div>
+
+                        <div class="tab-pane fade" id="finance" role="tabpanel">
+                            <% for(let i=0; i<data.finance.length; i++) { %>
+                                <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button accordion-icon-bg shadow-none rounded-3 collapsed"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#qf-<%- i %>"
+                                                aria-expanded="false"
+                                                aria-controls="qf-<%- i %>">
+                                                <%- data.finance[i].qust_ctt %>
+                                        </button>
+                                    </h3>
+                                    <div
+                                        class="accordion-collapse collapse"
+                                        id="qf-<%- i %>"
+                                        data-bs-parent="#faq">
+                                        <div class="accordion-body fs-sm pt-0">
+                                        <p> <%- data.finance[i].answ_ctt %> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% } %>
+                        </div>
+
+                        <div class="tab-pane fade" id="life" role="tabpanel">
+                            <% for(let i=0; i<data.life.length; i++) { %>
+                                <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button accordion-icon-bg shadow-none rounded-3 collapsed"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#ql-<%- i %>"
+                                                aria-expanded="false"
+                                                aria-controls="ql-<%- i %>">
+                                                <%- data.life[i].qust_ctt %>
+                                        </button>
+                                    </h3>
+                                    <div
+                                        class="accordion-collapse collapse"
+                                        id="ql-<%- i %>"
+                                        data-bs-parent="#faq">
+                                        <div class="accordion-body fs-sm pt-0">
+                                        <p> <%- data.life[i].answ_ctt %> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        <!-- <div class="col-xl-3 col-lg-4">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#modalConsult">
+                <div class="sticky-top" style="top: 105px !important;">
+                    <div class="card card-body bg-secondary">
+                    <i class="bx bx-message-detail fs-2 color-green"></i>
+                    <span class="fs-sm fw-semibold">보험에 대해 자세한 정보가 궁금하시면<br>
+                        <span class="fs-lg color-green fw-bold"><u>지금 상담을 통해 확인하세요!</u></span></span>
+                        
+                    </div>
+                </div>
+            </a>
+        </div> -->
+      
+      </section>
+    </main>
+    <!-- Footer -->
+    <% include footer %>
+
+    <!-- Consult -->
+    
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+    <!-- Vendor Scripts -->
+    <script src="/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="/assets/js/src/components/sticky-navbar.js"></script>
+    <script src="/assets/js/src/components/scroll-top-button.js"></script>
+    <script src="/assets/js/src/theme.js"></script>
+  </body>
+</html>

@@ -1,14 +1,14 @@
 var express = require("express");
 var router = express.Router();
 var modules = require("../modules");
-var mapper = require("./mapper.js");
+var mapper = require("./mapperCs.js");
 // const axios = require('axios');
 
 /* GET fag */
 router.get("/", async function (req, res) {
   try {
     // 포스트 목록
-    let sql = `select * from blog.faq;`;
+    let sql = mapper.sqlFaqList;
     let result = await modules.pg.query(sql);
     let data = {insurance:[], finance:[], life:[]};
 

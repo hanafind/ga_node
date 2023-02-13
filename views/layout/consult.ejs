@@ -1,0 +1,60 @@
+<div id="modalConsult" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">상담 신청</h5>
+        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="tab-pane needs-validation" autocomplete="on" id="formConsult">
+          <div class="mb-4">
+            <label for="service" class="form-label fs-base">상담 분야</label>
+            <select id="service" class="form-select form-select-lg" required>
+              <option value="" selected="" disabled="">상담 받고자 하는 분야를 선택하세요.</option>
+              <option value="Custom Software Development">종신보험</option>
+              <option value="Software Integration">실손보험</option>
+              <option value="Mobile App Development">암보험</option>
+              <option value="Business Analytics">운전자보험</option>
+              <option value="Software Testing">기타</option>              
+            </select>
+            <div class="invalid-feedback">상담분야를 선택해주세요!</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="name">이름</label>
+            <input class="form-control" type="text" id="name" required>
+            <div class="invalid-feedback">이름을 입력하세요.</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="name">연락처</label>
+            <input class="form-control" type="text" id="tel" required>
+            <div class="invalid-feedback">연락처를 입력하세요.</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="email2">Email</label>
+            <input class="form-control" type="email" id="email2">
+          </div>
+          <div class="mb-4 pb-2">
+            <label for="message" class="form-label fs-base">요청사항</label>
+            <textarea id="message" class="form-control form-control-lg" rows="3"></textarea>
+          </div>
+          <div class="mb-4">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="dropdownCheck" required>
+              <label for="dropdownCheck" class="form-check-label">약관 동의(필수)</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">닫기</button>
+            <!-- <button class="btn btn-primary btn-sm" type="button">상담 신청</button> -->
+            <button type="submit" class="btn btn-primary shadow-primary">접수</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+
+</script>

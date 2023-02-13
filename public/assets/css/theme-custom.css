@@ -405,3 +405,46 @@ article ol, article ul {
     margin: 0;
     padding-left: 1.5rem;
 }
+
+.accordion-icon-bg {
+    --si-accordion-btn-icon-box-bg: #f3f6ff;
+    --si-accordion-btn-icon-box-active-bg: #009090;
+}
+
+.bg-hana {
+    color: #fff;
+    opacity: 1;
+    background-color: #009090;
+}
+
+/* custom radio button */
+input[type=radio]{
+	width: 0;
+    height: 0;
+    position: absolute;
+    left: -9999px;
+}
+input[type=radio] + label{
+    margin: 0;
+    padding: .75em 1.5em;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    border: solid 1px #009090;
+    background-color: #FFF;
+    line-height: 140%;
+    text-align: center;
+    transition: border-color .15s ease-out,  color .25s ease-out,  background-color .15s ease-out, box-shadow .15s ease-out;
+    cursor: pointer;
+}
+input[type=radio]:checked + label{
+	background-color: #009090;
+    color: #FFF;
+    border-color: #009090;
+    z-index: 1;
+}
+
+.modal-content-padding {
+    padding-right: var(--si-modal-padding);
+    padding-left: var(--si-modal-padding);
+}

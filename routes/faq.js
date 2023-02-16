@@ -2,7 +2,6 @@ var express = require("express");
 var router = express.Router();
 var modules = require("../modules");
 var mapper = require("./mapperCs.js");
-// const axios = require('axios');
 
 /* GET fag */
 router.get("/", async function (req, res) {
@@ -23,7 +22,7 @@ router.get("/", async function (req, res) {
     }
     res.render("faq", {
         title: '자주하는 질문',
-        data: data,
+        data: data
     });
   } catch (err) {
     res.redirect("/");
@@ -32,17 +31,21 @@ router.get("/", async function (req, res) {
 
 router.post("/consult", async function (req, res) {
     try {
-        let sql = `SELECT last_value as seq FROM cs.consult_history_idx_seq;`;
+        let sql = mapper.sqlConsultSeq;
         let result = await modules.pg.query(sql);
-        console.log('result : ' + result[0].seq);
-
-        req.body.seq = result[0].seq + 1;
-        req.body.inflow_route = 'HFF_IN_01';
         
-        // let result_consult = await modules.axios.axiosPost(req.body);
+        req.body.seq = parseInt(result[0].seq)+1;           // 삼당고유번호
+        req.body.inflow_route = 'HFF_IN_01';    // 유입채널
+        req.body.agree = 'Y';                   // 약관동의
+        req.body.cnslDtmFrom = req.body.cnslDtm.substr(0,4);
+        req.body.cnslDtmTo = req.body.cnslDtm.substr(4,4);
 
-        res.status(200).json({msg: "suc"});
-        // console.log('result : ' + JSON.stringify(result));
+        console.log(req.body);
+        
+        // GPS
+        // let result_consult = await modules.axios.postConsultGps(req.body);
+
+        res.json({result:"200", msg: '상담신청이 완료되었습니다.'});
 
     } catch (err) {
 

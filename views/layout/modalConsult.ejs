@@ -1,0 +1,85 @@
+<div id="modalConsult" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" style="color: #009090;">상담 신청</h5>
+        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="form" class="pb-3 pb-lg-4 offset-xl-1 needs-validation" onsubmit="fn_reqConsult(event)" novalidate>
+          <div class="row pb-2">
+            <div class="col-sm-6 mb-4">
+              <label for="custNm" class="form-label fs-base">이름</label>
+              <input type="text" id="custNm" name="custNm" class="form-control form-control-lg" required>
+              <div class="invalid-tooltip">이름을 입력하세요</div>
+            </div>
+            <div class="col-sm-6 mb-4">
+              <label for="sex" class="form-label fs-base" >성별</label>
+              <div>
+                <input type="radio" id="sex_m" name="sex" value="M" required>
+                <label for="sex_m">남</label>
+                <input type="radio" id="sex_w" name="sex" value="W" required>
+                <label for="sex_w">여</label>
+              <div class="invalid-tooltip">성별을 선택하세요</div>
+              </div>
+            </div>
+            <div class="col-sm-6 mb-4">
+              <label for="brdt" class="form-label fs-base">생년월일</label>
+              <input type="text" id="brdt" name="brdt" class="form-control form-control-lg" placeholder="생년월일 8자리" oninput="addHyphen(this)" maxlength="10" required>
+              <div class="invalid-tooltip">생년월일을 입력해주세요</div>
+            </div>
+            <div class="col-sm-6 mb-4">
+              <label for="ptblTlno" class="form-label fs-base">연락처</label>
+              <input type="text" id="ptblTlno" name="ptblTlno" class="form-control form-control-lg" oninput="addHyphen(this)" maxlength="13" required>
+              <div class="invalid-tooltip">연락처를 입력해주세요</div>
+            </div>
+            <div class="col-sm-6 mb-4">
+              <label class="form-label fs-base" for="cnslDtm">희망 상담시간</label>
+                <select class="form-select form-select-lg" id="cnslDtm" name="cnslDtm">
+                  <option val="09001200">09:00 ~ 12:00</option>
+                  <option val="12001500">12:00 ~ 15:00</option>
+                  <option val="15001800">15:00 ~ 18:00</option>
+                </select>
+            </div>
+            <div class="col-sm-6 mb-4">
+              <label class="form-label fs-base" for="arNm">상담지역</label>
+                <select class="form-select form-select-lg" id="arNm" name="arNm">
+                  <option value="강원">강원</option>
+  								<option value="경기">경기</option>
+	  							<option value="경남">경남</option>
+                  <option value="경북">경북</option>
+                  <option value="광주">광주</option>
+  								<option value="대구">대구</option>
+	  							<option value="대전">대전</option>
+		  						<option value="부산">부산</option>
+			  					<option value="서울">서울</option>
+				  				<option value="세종">세종</option>
+					  			<option value="울산">울산</option>
+						  		<option value="인천">인천</option>
+							  	<option value="전남">전남</option>
+							    <option value="전북">전북</option>
+							    <option value="제주">제주</option>
+							    <option value="충남">충남</option>
+                  <option value="충북">충북</option>
+                </select>
+            </div>
+          </div>
+          <div class="mb-4">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="dropdownCheck" required>
+              <label for="dropdownCheck" class="form-check-label">
+                개인정보 수집 이용 및 위탁에 관한 동의(필수)
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalConsult"><u>상세보기</u></a>
+              </label>
+              <div class="invalid-tooltip">필수 약관에 동의해주세요.</div>
+            </div>
+          </div>
+            <button type="submit" class="btn btn-primary" >상담신청하기</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/js/src/layout/modalConsult.js"></script>
+

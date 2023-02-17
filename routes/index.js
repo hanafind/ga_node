@@ -75,15 +75,19 @@ router.get(["/"], async function (req, res) {
     var result3 = await modules.pg.query(sql);
     result3[0].currentPage = req.query.page;
 
+    var result4 = await modules.pg.query(mapper.sqlDirectRecommend);
+
     res.render("index", {
       title: "홈",
       data: result,
       data_recommand: result2,
       data_pageInfo: result3,
+      data_directRecommend: result4,
       req: req,
       res, res
     });
   } catch (err) {
+    console.log(err);
     res.redirect("/");
   }
 });

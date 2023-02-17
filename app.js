@@ -12,6 +12,7 @@ const pgPool = new pg.Pool(config.postgresql);
 var indexRouter = require('./routes/index');
 var blogRouter = require('./routes/blog');
 var faqRouter = require('./routes/faq');
+var productRouter = require('./routes/product');
 
 var app = express();
 
@@ -28,8 +29,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/blog', blogRouter);
 app.use('/faq', faqRouter);
+app.use('/products', productRouter);
 app.use('/uploads', express.static(config.blog.upload_path));
-
 
 app.use(expressSession({
   store: new pgSession({

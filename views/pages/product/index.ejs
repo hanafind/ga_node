@@ -37,7 +37,7 @@
                     <% for(var i=0;i<res.data.products_recommend.length;i++){ %>
                     <div class="swiper-slide">
                         <div class="proudct-item hvr-pop">
-                            <a href="https://www.educar.co.kr/ext/getCal?j=FINGLE1DayCar&t=oneCar" target="_blank">
+                            <a href="<%- res.data.products_recommend[i].url %>" target="_blank">
                                 <div>
                                     <span class="badge bg-secondary"><%- res.data.products_recommend[i].category_name %></span>
                                     <i class="icon-outlink"></i>

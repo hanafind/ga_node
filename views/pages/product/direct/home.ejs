@@ -8,7 +8,7 @@
             <% for(var i=0;i<data_directRecommend.length;i++){ %>
             <div class="swiper-slide">
                 <div class="proudct-item hvr-pop">
-                    <a href="https://www.educar.co.kr/ext/getCal?j=FINGLE1DayCar&t=oneCar" target="_blank">
+                    <a href="<%- data_directRecommend[i].url %>" target="_blank">
                         <div>
                             <span class="badge bg-secondary"><%- data_directRecommend[i].category_name %></span>
                             <i class="icon-outlink"></i>

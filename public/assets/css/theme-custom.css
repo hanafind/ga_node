@@ -90,7 +90,7 @@ a{
 }
 .header-scroll > div{
     height: 2px;
-    background-color: #000;
+    background-color: #009090;
 }
 /* pagination */
 .pagination .page-item.active a{

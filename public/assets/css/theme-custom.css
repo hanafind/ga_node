@@ -65,6 +65,9 @@ a{
 .navbar:not(.navbar-transparent) .hanafind-black{
     display: block;
 }
+.navbar:not(.navbar-transparent) .hanafind-logo{
+    display: block;
+}
 .navbar .top-logo{
     width: 150px;
     height: 27px;
@@ -596,7 +599,7 @@ input[type=radio]:checked + label{
 }
 @media (max-width: 767px) {
     .product-recommend-swiper{
-        padding-bottom: 40px;
+        padding-bottom: 50px;
     }
 }
 /* swiper */

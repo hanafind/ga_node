@@ -293,14 +293,15 @@
                     index++;
                 }
                 $('.product-list').empty().append(html);
-                /*
+                
                 var scroll = new SmoothScroll();
                 if(firstOpenPage){
                     firstOpenPage = false;
                 } else {
-                    scroll.animateScroll(document.querySelector("#product-list-wrap").offsetTop-parseInt($('.header').height()), 3000);
+                    if(parseInt($(window).width())<767){
+                        scroll.animateScroll(document.querySelector("#product-list-wrap").offsetTop-parseInt($('.header').height()+30), 3000);
+                    }
                 }
-                */
             };
             setProducts();
             const swiper_product = new Swiper(".product-recommend-swiper", {

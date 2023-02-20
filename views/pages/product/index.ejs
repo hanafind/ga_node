@@ -297,10 +297,9 @@
                 var scroll = new SmoothScroll();
                 if(firstOpenPage){
                     firstOpenPage = false;
-                } else {
-                    if(parseInt($(window).width())<767){
-                        scroll.animateScroll(document.querySelector("#product-list-wrap").offsetTop-parseInt($('.header').height()+30), 3000);
-                    }
+                }
+                if(parseInt($(window).width())<767){
+                    scroll.animateScroll(document.querySelector("#product-list-wrap").offsetTop-parseInt($('.header').height()+30), 3000);
                 }
             };
             setProducts();

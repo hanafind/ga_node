@@ -207,6 +207,38 @@
                 <button type="button" id="btn_consultant" class="btn btn-sm btn-outline-secondary">상담 신청</button>
             </section>
         </section>
+        <section class="container py-5 my-md-2 my-lg-4 my-xl-5">
+            <div class="row justify-content-center pt-1 pb-1 mb-2 mb-md-3 mb-lg-4">
+              <div class="col-lg-8 col-md-9 text-center">
+                <h2 class="mb-0">제휴 보험사</h2>
+                <p class="fs-lg text-muted mb-0"></p>
+              </div>
+            </div>
+            <div id="swiper_company" class="swiper swiper-nav-onhover mx-n2">
+              <div class="swiper-wrapper">
+                <% for(var i=0;i<res.data.partners.length;i++){ %>
+                <!-- Item -->
+                <div class="swiper-slide py-5">
+                    <div href="#" class="card card-hover border-0 shadow-sm py-3 mx-2">
+                        <div class="card-body">
+                            <div style="
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            resize: both;
+                            height: 50px;
+                        ">
+                                <img src="<%- res.data.partners[i].logo_url %>" class="d-block mx-auto" alt="<%- res.data.partners[i].name %>">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+              
+            </div>
+            <!-- Pagination (bullets) -->
+            <!--<div class="swiper-pagination position-relative pt-3 mt-4"></div>-->
+          </section>
     </main>
 
     <!-- Footer -->
@@ -331,6 +363,40 @@
                     el: ".swiper-pagination",
                     clickable: true,
                 },
+            });
+
+            const swiper_company = new Swiper('#swiper_company',{
+                "slidesPerView": 2,
+                "spaceBetween": 8,
+                "pagination": {
+                    "el": ".swiper-pagination",
+                    "clickable": false
+                },
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false
+                },
+                loop: true,
+                "breakpoints": {
+                    "500": {
+                    "slidesPerView": 3
+                    },
+                    "600": {
+                    "slidesPerView": 4
+                    },
+                    "768": {
+                    "slidesPerView": 5
+                    },
+                    "850": {
+                    "slidesPerView": 6
+                    },
+                    "1000": {
+                    "slidesPerView": 7
+                    },
+                    "1200": {
+                    "slidesPerView": 8
+                    }
+              }
             });
         });
     </script>

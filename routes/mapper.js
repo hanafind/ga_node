@@ -66,9 +66,44 @@ let sqlPostView =
         AND pc.idx = pcm.post_categories_idx`;
 
 
+let sqlDirectRecommend =
+`
+SELECT
+    c.idx as company_idx, c.name as company_name, c.logo_url,
+    pdc.idx as category_idx, pdc.name as category_name,
+    pd.idx, pd.name, pd.description, pd.url, pd.is_visible, pd.created_at
+FROM
+    insurance.product_direct as pd, insurance.product_direct_category as pdc, insurance.company as c,
+    insurance.product_direct_recommend as pdr
+WHERE
+    pd.product_direct_category_idx = pdc.idx
+    AND
+    pd.company_idx = c.idx
+    AND
+    pd.idx = pdr.product_direct_idx
+`;
+
+let sqlDirectAll = 
+`
+SELECT
+c.idx as company_idx, c.name as company_name, c.logo_url,
+pdc.idx as category_idx, pdc.name as category_name, pdc.group_name as category_group_name,
+pd.idx, pd.name, pd.description, pd.url, pd.is_visible, pd.created_at
+FROM
+insurance.product_direct as pd, insurance.product_direct_category as pdc, insurance.company as c
+WHERE
+is_deleted = false
+AND
+pd.product_direct_category_idx = pdc.idx
+AND
+pd.company_idx = c.idx
+`;
+
 exports.sqlCategory = sqlCategory;
 exports.sqlInterval = sqlInterval;
 exports.sqlPostList = sqlPostList;
 exports.sqlRecommandPost = sqlRecommandPost;
 exports.sqlPostPageCount = sqlPostPageCount;
 exports.sqlPostView = sqlPostView;
+exports.sqlDirectRecommend = sqlDirectRecommend;
+exports.sqlDirectAll = sqlDirectAll;

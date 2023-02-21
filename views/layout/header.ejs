@@ -5,7 +5,8 @@
 <% } %>
     <div class="container px-3">
       <a href="/" class="navbar-brand pe-3">
-        <img class="top-logo hanafind-black" src="/assets/img/logo/hanafind-logo-black.png">
+        <!--<img class="top-logo hanafind-black" src="/assets/img/logo/hanafind-logo-black.png">-->
+        <img class="top-logo hanafind-black" src="/assets/img/logo/hanafind-logo.png">
         <img class="top-logo hanafind-white" src="/assets/img/logo/hanafind-logo-white.png">
       </a>
       <div id="navbarNav" class="offcanvas offcanvas-end">
@@ -15,6 +16,9 @@
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav me-auto mb-2 mt-2 mtmb-lg-0">
+            <li class="nav-item">
+                <a href="/products" class="nav-link">보험상품</a>
+            </li>
             <li class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">하나공감</a>
               <ul class="dropdown-menu">
@@ -27,10 +31,19 @@
               <a href="/cs/faq" class="nav-link">자주하는 질문</a>
             </li>
           </ul>
-        </div>    
+        </div>
+        <div class="offcanvas-header border-top">
+            <button type="button" class="btn btn-primary w-100" rel="noopener">
+              <i class="bx bx-phone fs-4 lh-1 me-1"></i>
+              상담 신청
+            </button>
+        </div>
       </div>
       <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
+      </button>
+      <button type="button" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" rel="noopener">
+        <i class="bx bx-phone fs-4 lh-1 me-1"></i> 상담 신청
       </button>
     </div>
     <div class="header-scroll"><div></div></div>

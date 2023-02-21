@@ -9,9 +9,11 @@ const expressSession = require("express-session");
 const pgSession = require("connect-pg-simple")(expressSession);
 const pgPool = new pg.Pool(config.postgresql);
 
+
 var indexRouter = require("./routes/index");
 var blogRouter = require("./routes/blog");
 var csRouter = require("./routes/cs");
+var productRouter = require('./routes/product');
 
 var app = express();
 
@@ -33,23 +35,22 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/blog", blogRouter);
 app.use("/cs", csRouter);
+app.use('/products', productRouter);
 app.use("/uploads", express.static(config.blog.upload_path));
 
-app.use(
-  expressSession({
-    store: new pgSession({
-      pool: pgPool, // Connection pool
-      schemaName: "session",
-      tableName: "user_sessions", // Use another table-name than the default "session" one
-      // Insert connect-pg-simple options here
-    }),
-    secret: "hanafind2023blog!@#$",
-    resave: false,
-    saveUninitialized: true,
-    cookie: { maxAge: 30 * 24 * 60 * 60 * 1000 }, // 30 days
-    // Insert express-session options here
-  })
-);
+app.use(expressSession({
+  store: new pgSession({
+    pool: pgPool,                // Connection pool
+    schemaName: 'session',
+    tableName : 'user_sessions'   // Use another table-name than the default "session" one
+    // Insert connect-pg-simple options here
+  }),
+  secret: "hanafind2023blog!@#$",
+  resave: false,
+  saveUninitialized: true,
+  cookie: { maxAge: 30 * 24 * 60 * 60 * 1000 } // 30 days
+  // Insert express-session options here
+}));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

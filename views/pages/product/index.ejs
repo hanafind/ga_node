@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+     <!-- Head -->
+    <% include head %>
+
+    <meta charset="utf-8">
+    <title>고객중심 보험 서비스 - 하나금융파인드</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="보험, 금융, 라이프 관련 다양한 정보를 공유하고 공감하는 하나금융파인드입니다.">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="고객중심 보험 서비스 - 하나금융파인드">
+    <meta property="og:description" content="보험, 금융, 라이프 관련 다양한 정보를 공유하고 공감하는 하나금융파인드입니다.">
+    <meta property="og:image" content="<%= req.protocol %>://<%= req.headers.host %>/assets/logo_sns.png">
+    <meta property="og:url" content="<%= req.protocol %>://<%= req.headers.host %><%= req.originalUrl %>">
+    <script>
+        let directProducts = '<%- JSON.stringify(res.data.products_all) %>';
+    </script>
+  </head>
+
+  <!-- Body -->
+  <body>
+    <main class="page-wrapper">
+        <!-- Header -->
+        <%- include('layout/header', {isPosition: false}) %>
+
+        <section class="product-header">
+            <h2>
+                <span class="fw-normal">하나금융파인드의</span><br>
+                제휴 보험상품을 만나보세요.
+            </h2>
+        </section>
+        <section class="container direct-wrap pt-5 pb-3" style="position: relative;margin-top:-170px;">
+            <div class="swiper product-recommend-swiper">
+                <div class="swiper-wrapper">
+                    <% for(var i=0;i<res.data.products_recommend.length;i++){ %>
+                    <div class="swiper-slide">
+                        <div class="proudct-item hvr-pop">
+                            <a href="<%- res.data.products_recommend[i].url %>" target="_blank">
+                                <div>
+                                    <span class="badge bg-secondary"><%- res.data.products_recommend[i].category_name %></span>
+                                    <i class="icon-outlink"></i>
+                                </div>
+                                <div>
+                                    <img class="logo" src="<%- res.data.products_recommend[i].logo_url %>" alt="<%- res.data.products_recommend[i].company_name %>" />
+                                </div>
+                                <div>
+                                    <span class="name"><%- res.data.products_recommend[i].name %></span>
+                                </div>
+                                <div>
+                                    <span class="desc"><%- res.data.products_recommend[i].description %></span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="row product-type-list">
+                <h5 class="pb-3">찾고있는 보험 상품을 선택해주세요.</h5>
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col">
+                            <div class="product-type">
+                                <a href="#all" class="hvr-rectangle-out">
+                                    <img src="/assets/img/icon/iconmonstr-layer-multiple-lined.svg" alt="전체상품">
+                                    <div class="type">전체</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="product-type">
+                                <a href="#car" class="hvr-rectangle-out">
+                                    <img src="/assets/img/icon/iconmonstr-car-4.svg" alt="자동차/운전자보험">
+                                    <div class="type">자동차/운전자보험</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="product-type">
+                                <a href="#health" class="hvr-rectangle-out">
+                                    <img src="/assets/img/icon/iconmonstr-medical-2.svg" alt="건상보험">
+                                    <div class="type">건강보험</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col">
+                            <div class="product-type">
+                                <a href="#wholelife" class="hvr-rectangle-out">
+                                    <img src="/assets/img/icon/iconmonstr-umbrella-6.svg" alt="종신/정기보험">    
+                                    <div class="type">종신/정기보험</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="product-type">
+                                <a href="#pension" class="hvr-rectangle-out">
+                                    <img src="/assets/img/icon/iconmonstr-coin-10.svg" alt="연금/저축보험">
+                                    <div class="type">연금/저축보험</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="product-type">
+                                <a href="#travel" class="hvr-rectangle-out">
+                                    <img src="/assets/img/icon/iconmonstr-airport-2.svg" alt="여행보험">
+                                    <div class="type">여행보험</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col">
+                            <div class="product-type">
+                                <a href="#leisure" class="hvr-rectangle-out">
+                                    <img src="/assets/img/icon/iconmonstr-soccer-1.svg" alt="여행보험">
+                                    <div class="type">레저보험</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="product-type">
+                                <a href="#pet" class="hvr-rectangle-out">
+                                    <img src="/assets/img/icon/iconmonstr-cat-6.svg" alt="여행보험">
+                                    <div class="type">펫보험</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="product-type">
+                                <a href="#phone" class="hvr-rectangle-out">
+                                    <img src="/assets/img/icon/iconmonstr-smartphone-12.svg" alt="여행보험">
+                                    <div class="type">휴대폰보험</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="consultant-wrap" style="display: none;">
+            <section class="container pt-5 pb-5">
+                <h4>보험이 어려우신가요?</h4>
+                <p class="fs-6">하나금융파인드 보험전문가와 이야기 나눠 보세요.<br>
+                    상품 내용 설명부터 가입한 보험 분석, 내 상황에 맞춘 보험 설계까지 전문 컨설턴트가 도와드립니다.
+                </p>
+                <button type="button" id="btn_consultant" class="btn btn-sm btn-outline-secondary">상담 신청</button>
+            </section>
+        </section>
+        <section class="container">
+            <div class="alert alert-info alert-dismissible fade show pt-4 pb-4" role="alert">
+                <h4>보험이 어려우신가요?</h4>
+            <p class="fs-6">하나금융파인드 보험전문가와 이야기 나눠 보세요.<br>
+                상품 내용 설명부터 가입한 보험 분석, 내 상황에 맞춘 보험 설계까지 전문 컨설턴트가 도와드립니다.
+            </p>
+            <button type="button" id="btn_consultant" class="btn btn-sm btn-outline-secondary">상담 신청</button>
+            <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </section>
+        
+        <section id="product-list-wrap" class="container pt-3 pb-3">
+            <h5 id="product_category" class="pb-3">전체</h5>
+            <div class="product-list">
+                <% for(var i=0;i<6;i++){ %>
+                <div class="row">
+                    <% for(var j=0;j<2;j++){ %>
+                    <div class="col-md-6">
+                        <div class="proudct-item hvr-pop">
+                            <a href="https://www.educar.co.kr/ext/getCal?j=FINGLE1DayCar&t=oneCar" target="_blank">
+                                <div>
+                                    <span class="badge bg-secondary">자동차보험 Test-<%- i+1 %></span>
+                                    <i class="icon-outlink"></i>
+                                </div>
+                                <div>
+                                    <img class="logo" src="/assets/img/company/hanainsurance.png" />
+                                </div>
+                                <div>
+                                    <span class="name">원데이 자동차보험</span>
+                                </div>
+                                <div>
+                                    <span class="desc">오늘 타인의 차를 운전한다면? 합리적으로 준비해보세요</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+                <% } %>
+            </div>
+        </section>
+        <section class="consultant-wrap">
+            <section class="container pt-5 pb-5">
+                <h4>찾고 계신 보험 상품이 없으신가요?</h4>
+                <p class="fs-6">하나금융파인드 보험전문가와 이야기 나눠 보세요.<br>
+                    상품 내용 설명부터 가입한 보험 분석, 내 상황에 맞춘 보험 설계까지 전문 컨설턴트가 도와드립니다.
+                </p>
+                <button type="button" id="btn_consultant" class="btn btn-sm btn-outline-secondary">상담 신청</button>
+            </section>
+        </section>
+        <section class="container py-5 my-md-2 my-lg-4 my-xl-5">
+            <div class="row justify-content-center pt-1 pb-1 mb-2 mb-md-3 mb-lg-4">
+              <div class="col-lg-8 col-md-9 text-center">
+                <h2 class="mb-0">제휴 보험사</h2>
+                <p class="fs-lg text-muted mb-0"></p>
+              </div>
+            </div>
+            <div id="swiper_company" class="swiper swiper-nav-onhover mx-n2">
+              <div class="swiper-wrapper">
+                <% for(var i=0;i<res.data.partners.length;i++){ %>
+                <!-- Item -->
+                <div class="swiper-slide py-5">
+                    <div href="#" class="card card-hover border-0 shadow-sm py-3 mx-2">
+                        <div class="card-body">
+                            <div style="
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            resize: both;
+                            height: 50px;
+                        ">
+                                <img src="<%- res.data.partners[i].logo_url %>" class="d-block mx-auto" alt="<%- res.data.partners[i].name %>">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+              
+            </div>
+            <!-- Pagination (bullets) -->
+            <!--<div class="swiper-pagination position-relative pt-3 mt-4"></div>-->
+          </section>
+    </main>
+
+    <!-- Footer -->
+    <% include footer %>
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2"></span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+    
+    <!-- Vendor Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+    <script src="/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="/assets/js/src/components/sticky-navbar.js"></script>
+    <script src="/assets/js/src/components/scroll-top-button.js"></script>
+    <script src="/assets/js/src/theme.js"></script>
+    <script>       
+       
+        directProducts = JSON.parse(directProducts);
+        let firstOpenPage = true;
+        document.addEventListener("DOMContentLoaded", function(){
+            window.addEventListener('hashchange', ()=>{
+                setProducts();
+            }, false);
+
+            const setProducts = ()=>{
+                let productType = location.hash.substring(1);
+                if(!productType){
+                    productType = 'all';
+                }
+                let product_category = '전체';
+                switch (productType) {
+                    case 'all' : product_category = '전체'; break;
+                    case 'car' : product_category = '자동차/운전자보험'; break;
+                    case 'health' : product_category = '건강보험'; break;
+                    case 'wholelife' : product_category = '종신/정기보험'; break;
+                    case 'pension' : product_category = '연금/저축보험'; break;
+                    case 'travel' : product_category = '여행보험'; break;
+                    case 'leisure' : product_category = '레저보험'; break;
+                    case 'pet' : product_category = '펫보험'; break;
+                    case 'phone' : product_category = '휴대폰보험'; break;
+                    default : product_category = '전체'; break;
+                }
+                $('#product_category').text(product_category);
+                $('.product-type-list .product-type a').removeClass('active');
+                $('.product-type-list .product-type a[href="#'+productType+'"]').addClass('active');
+
+                let html = '';
+                let index = 0;
+                for(let i=0;i<directProducts.length;i++){
+                    if(productType!=='all' && productType!==directProducts[i].category_group_name){
+                        continue;    
+                    }
+                    if(index%2==0){
+                        html += `<div class="row">`;
+                    }
+                    html += `
+                        <div class="col-md-6">
+                            <div class="proudct-item hvr-pop">
+                                <a href="${directProducts[i].url}" target="_blank">
+                                    <div>
+                                        <span class="badge bg-secondary">${directProducts[i].category_name}</span>
+                                        <i class="icon-outlink"></i>
+                                    </div>
+                                    <div>
+                                        <img class="logo" src="${directProducts[i].logo_url}" />
+                                    </div>
+                                    <div>
+                                        <span class="name">${directProducts[i].name}</span>
+                                    </div>
+                                    <div>
+                                        <span class="desc">${directProducts[i].description}</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>`;
+                    if(index%2==1){
+                        html += `</div>`;
+                    }
+                    index++;
+                }
+                $('.product-list').empty().append(html);
+                
+                var scroll = new SmoothScroll();
+                if(firstOpenPage){
+                    firstOpenPage = false;
+                }
+                if(parseInt($(window).width())<767){
+                    scroll.animateScroll(document.querySelector("#product-list-wrap").offsetTop-parseInt($('.header').height()+30), 3000);
+                }
+            };
+            setProducts();
+            const swiper_product = new Swiper(".product-recommend-swiper", {
+                slidesPerView: 1,
+                centeredSlides: false,
+                slidesPerGroupSkip: 1,
+                grabCursor: true,
+                loop: true,
+                spaceBetween: 30,
+                keyboard: {
+                    enabled: true,
+                },
+                breakpoints: {
+                    769: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 1,
+                    },
+                    1401:{
+                        slidesPerView: 3,
+                        slidesPerGroup: 1,
+                    }
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+
+            const swiper_company = new Swiper('#swiper_company',{
+                "slidesPerView": 2,
+                "spaceBetween": 8,
+                "pagination": {
+                    "el": ".swiper-pagination",
+                    "clickable": false
+                },
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false
+                },
+                loop: true,
+                "breakpoints": {
+                    "500": {
+                    "slidesPerView": 3
+                    },
+                    "600": {
+                    "slidesPerView": 4
+                    },
+                    "768": {
+                    "slidesPerView": 5
+                    },
+                    "850": {
+                    "slidesPerView": 6
+                    },
+                    "1000": {
+                    "slidesPerView": 7
+                    },
+                    "1200": {
+                    "slidesPerView": 8
+                    }
+              }
+            });
+        });
+    </script>
+  </body>
+</html>

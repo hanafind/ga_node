@@ -1,9 +1,11 @@
 const axios = require('axios');
+const config = require(`../config/${process.env.NODE_ENV}.json`);
+
 
 const postConsultGps = async(data) => {
     return await axios({
         method: 'post', 
-        url: 'http://183.109.29.98:18180/api/hanaEmpathy/hffgp0001',
+        url: config.host.gps + '/api/hanaEmpathy/hffgp0001',
         data: data
     }).then(function (res) {
         console.log(res);

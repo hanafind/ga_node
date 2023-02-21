@@ -629,7 +629,7 @@ input[type=radio]:checked + label{
 }
 .product-recommend-swiper .swiper-slide img {
     display: inline-block;
-    height: 30px;
+    height: 20px;
 }
 .proudct-item{
     display: block;

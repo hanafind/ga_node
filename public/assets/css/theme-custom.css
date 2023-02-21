@@ -457,19 +457,22 @@ input[type=radio]{
     position: absolute;
     left: -9999px;
 }
+
 input[type=radio] + label{
     margin: 0;
-    padding: .75em 1.5em;
+    padding: 1.1em 1.5em;
     box-sizing: border-box;
     position: relative;
     display: inline-block;
-    border: solid 1px #009090;
+    border: solid 1px #d4d7e5;
     background-color: #FFF;
     line-height: 140%;
     text-align: center;
     transition: border-color .15s ease-out,  color .25s ease-out,  background-color .15s ease-out, box-shadow .15s ease-out;
     cursor: pointer;
+    border-radius: 0.5rem;
 }
+
 input[type=radio]:checked + label{
 	background-color: #009090;
     color: #FFF;
@@ -481,6 +484,7 @@ input[type=radio]:checked + label{
     padding-right: var(--si-modal-padding);
     padding-left: var(--si-modal-padding);
 }
+
 .product-header{
     padding: 60px 40px 120px 40px;
     text-align: center;
@@ -715,4 +719,7 @@ input[type=radio]:checked + label{
 }
 #product-list-wrap .row .col-md-6{
     margin-bottom: 50px;
+}
+.form-control-ns {
+    resize: none;
 }

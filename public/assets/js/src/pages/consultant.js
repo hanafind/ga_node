@@ -24,7 +24,7 @@ function fn_reqConsult(event) {
   
   const formData = new FormData(event.target);
 
-  fetch("/cs/postConsultant1", {
+  fetch("/cs/postConsultant", {
     headers: {
 	    Accept: "application / json",
 	  },

@@ -46,26 +46,6 @@ router.get("/consultantComplete", async function (req, res) {
     }
 });
 
-router.post("/postConsultant1", async function (req, res) {
-    try {
-        let result = await modules.pg.query(mapperCs.selectConsultHistorySeq);
-
-        req.body.seq = parseInt(result[0].seq)+1;           // 삼당고유번호
-        req.body.inflow_route = 'HFF_IN_01';    // 유입채널
-        req.body.agree = 'Y';                   // 약관동의
-        req.body.cnslDtmFrom = req.body.cnslDtm.substr(0,4);
-        req.body.cnslDtmTo = req.body.cnslDtm.substr(4,4);
-
-        res.json({code:'0', msg: '상담신청이 정상적으로 접수되었습니다. 입력하신 정보로 연락드려 상담을 도와 드리겠습니다. 감사합니다.'});
-
-        // res.redirect('/cs/consultantComplete');
-        
-    } catch (err) {
-        res.redirect("/");
-    }
-});
-
-
 router.post("/postConsultant", async function (req, res) {
     try {
         let result = await modules.pg.query(mapperCs.selectConsultHistorySeq);

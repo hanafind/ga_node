@@ -25,12 +25,7 @@ function fn_reqConsult(event) {
   const formData = new FormData(event.target);
 
   fetch("/cs/postConsultant", {
-    headers: {
-	    Accept: "application / json",
-	  },
     method: "POST",
-    redirect: 'follow',
-    referrer: 'no-referrer',
     body: new URLSearchParams({
       custNm: formData.get("custNm"),
       sex: formData.get("sex"),
@@ -45,7 +40,7 @@ function fn_reqConsult(event) {
       return res.json();
     })
     .then(json => {
-        if (json.code === '0') {
+        if (json.code == '0') {
           location.pathname = '/cs/consultantComplete';
         } else {
           toast(json.msg);

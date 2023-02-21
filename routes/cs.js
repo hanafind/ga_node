@@ -48,7 +48,7 @@ router.get("/consultantComplete", async function (req, res) {
 
 router.post("/postConsultant", async function (req, res) {
     try {
-        let result = await modules.pg.query(mapperCs.selectConsultHistorySeq);
+        let result = await modules.pg.query(mapperCs.selectConsultantSeq);
 
         req.body.seq = parseInt(result[0].seq)+1;           // 삼당고유번호
         req.body.inflow_route = 'HFF_IN_01';    // 유입채널
@@ -58,9 +58,11 @@ router.post("/postConsultant", async function (req, res) {
 
         // // GPS
         let resultAxios = await modules.axios.postConsultGps(req.body);
-        if (resultAxios.resultCd === '0') {
+
+        if (resultAxios.resultCd == '0') {
             let values = [req.body.custNm];
-            result = await modules.pg.query(mapperCS.insertConsultHistory, values);
+            result = await modules.pg.query(
+                `insert into cs.consultant(cust_name, created_at) values($1, now())`, values);
         } else {
             switch (resultAxios.resultMessage) {
                 case 'DUP_TLNO':
@@ -69,10 +71,11 @@ router.post("/postConsultant", async function (req, res) {
             }
         }
         res.json({code:resultAxios.resultCd, msg: resultAxios.resultMessage});
-
     } catch (err) {
         res.redirect("/");
     }
 });
+
+
 
 module.exports = router;

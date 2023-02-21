@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko" itemscope itemtype="https://schema.org/FAQPage">
+  <head>
+    <!-- Head -->
+    <% include head %>
+
+    <meta charset="utf-8" />
+    <title>하나금융파인드-상담 신청</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="보험, 금융, 라이프 관련 다양한 정보를 공유하고 공감하는 하나금융파인드입니다."
+    />
+    <meta property="og:type" content="blog" />
+    <meta property="og:title" content="하나금융파인드 하나공감" />
+    <meta
+      property="og:description"
+      content="보험, 금융, 라이프 관련 다양한 정보를 공유하고 공감하는 하나금융파인드입니다."
+    />
+  </head>
+  <body>
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+      <!-- Header -->
+      <%- include('header', {isPosition:false}) %>
+      <section class="container contents-html pt-5 pb-3">
+        <div class="row">
+          <div class="col-xl-9 col-lg-8">
+            <h1 class="h3 mb-4">상담 신청</h1>
+          </div>
+          <div class="col-xl-9 col-lg-8">
+            <div class="card card-body bg-secondary">
+                <div class="fs-base" >보험에 대해 더 자세한 정보가 궁금하시다구요? 
+                     삼당을 통해 빠르게 궁금증을 해소하실 수 있습니다.<br>
+                    <span class="fs-lg color-green fw-bold">지금 상담 신청을 해보세요.</span></span>
+                </sapn>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="row mt-4">
+          <form
+            id="form"
+            class="col-xl-9 col-lg-8 needs-validation"
+            onsubmit="fn_reqConsult(event)"
+            novalidate
+          >
+            <div class="row pb-2">
+              <div class="col-sm-6 mb-4">
+                <label for="custNm" class="form-label fs-base"
+                  >이름(필수)</label
+                >
+                <input
+                  type="text"
+                  id="custNm"
+                  name="custNm"
+                  class="form-control form-control-lg"
+                  required
+                />
+                <div class="invalid-feedback">이름을 입력하세요</div>
+              </div>
+              <div class="col-sm-6 mb-4">
+                <label for="sex" class="form-label fs-base">성별(필수)</label>
+                <div>
+                  <input
+                    type="radio"
+                    id="sex_m"
+                    name="sex"
+                    value="M"
+                    required
+                  />
+                  <label for="sex_m">남</label>
+                  <input
+                    type="radio"
+                    id="sex_w"
+                    name="sex"
+                    value="W"
+                    required
+                  />
+                  <label for="sex_w">여</label>
+                  <div class="invalid-feedback">성별을 선택하세요</div>
+                </div>
+              </div>
+              <div class="col-sm-6 mb-4">
+                <label for="brdt" class="form-label fs-base"
+                  >생년월일(필수)</label
+                >
+                <input
+                  type="text"
+                  id="brdt"
+                  name="brdt"
+                  class="form-control form-control-lg"
+                  placeholder="생년월일 8자리"
+                  oninput="addHyphen(this)"
+                  maxlength="10"
+                  required
+                />
+                <div class="invalid-feedback">생년월일을 입력해주세요</div>
+              </div>
+              <div class="col-sm-6 mb-4">
+                <label for="ptblTlno" class="form-label fs-base"
+                  >연락처(필수)</label
+                >
+                <input
+                  type="text"
+                  id="ptblTlno"
+                  name="ptblTlno"
+                  class="form-control form-control-lg"
+                  oninput="addHyphen(this)"
+                  maxlength="13"
+                  required
+                />
+                <div class="invalid-feedback">연락처를 입력해주세요</div>
+              </div>
+              <div class="col-sm-6 mb-4">
+                <label class="form-label fs-base" for="cnslDtm"
+                  >희망 상담시간(선택)</label
+                >
+                <select
+                  class="form-select form-select-lg"
+                  id="cnslDtm"
+                  name="cnslDtm"
+                >
+                  <option value="">선택</option>
+                  <option value="09001200">09:00 ~ 12:00</option>
+                  <option value="12001500">12:00 ~ 15:00</option>
+                  <option value="15001800">15:00 ~ 18:00</option>
+                </select>
+              </div>
+              <div class="col-sm-6 mb-4">
+                <label class="form-label fs-base" for="arNm"
+                  >상담지역(선택)</label
+                >
+                <select
+                  class="form-select form-select-lg"
+                  id="arNm"
+                  name="arNm"
+                >
+                  <option value="">선택</option>
+                  <option value="강원">강원</option>
+                  <option value="경기">경기</option>
+                  <option value="경남">경남</option>
+                  <option value="경북">경북</option>
+                  <option value="광주">광주</option>
+                  <option value="대구">대구</option>
+                  <option value="대전">대전</option>
+                  <option value="부산">부산</option>
+                  <option value="서울">서울</option>
+                  <option value="세종">세종</option>
+                  <option value="울산">울산</option>
+                  <option value="인천">인천</option>
+                  <option value="전남">전남</option>
+                  <option value="전북">전북</option>
+                  <option value="제주">제주</option>
+                  <option value="충남">충남</option>
+                  <option value="충북">충북</option>
+                </select>
+              </div>
+              <div class="col-sm mb-4">
+                <label for="memo" class="form-label fs-base"
+                  >상담내용(선택)</label
+                >
+                <textarea
+                  id="memo"
+                  name="memo"
+                  class="form-control form-control-lg form-control-ns"
+                  rows="4"
+                  maxlength="1000"
+                  placeholder="상담하실 내용을 입력해 주세요.(1000자 이내)"
+                ></textarea>
+                <span class="fs-xs mt-2"
+                  >※ 고객정보 보호를 위해 주민등록번호 등 민감한 개인정보는
+                  제외하고 입력해 주세요.</span
+                >
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="dropdownCheck"
+                  required
+                />
+                <label for="dropdownCheck" class="form-check-label">
+                  개인정보 수집 이용 및 위탁에 관한 동의(필수)
+                  <a
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal_privacy_policy"
+                    ><u>상세보기</u></a
+                  >
+                </label>
+                <div class="invalid-feedback">필수 약관에 동의해주세요.</div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">상담신청하기</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <% include footer %> 
+    <% include toast %> 
+    <% include modal_privacy_policy %>
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+    <!-- Vendor Scripts -->
+    <script src="/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="/assets/js/src/components/sticky-navbar.js"></script>
+    <script src="/assets/js/src/components/scroll-top-button.js"></script>
+    <script src="/assets/js/src/theme.js"></script>
+    <script src="/assets/js/src/pages/consultant.js"></script>
+  </body>
+</html>

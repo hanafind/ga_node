@@ -1,24 +1,36 @@
-document.addEventListener("hide.bs.modal", function() {
-  document.getElementById("form").reset();
-  location.href = document.referrer; 
-});
+// document.addEventListener("hide.bs.modal", function() {
+//   location.href = document.referrer; 
+// });
 
 function fn_reqConsult(event) {
   event.preventDefault();
 
   if (!checkBrdt()) {
-    alert("생년월일 이상해");
+    toast("생년월일을 정확히 입력해주세요");
     return;
   } 
   if (!checkPhoneNumber()) {
-    alert("폰번호 이상해");
+    toast("연락처를 정확히 입력해주세요");
     return;
   }
 
-  const formData = formDataToObject(new FormData(event.target));
+  if (!document.getElementById('dropdownCheck').checked) {
+    return;
+  }
+
+  if (!document.getElementById('sex_m').checked && !document.getElementById('sex_w').checked) {
+    return;
+  }
   
-  fetch("/faq/consult", {
+  const formData = new FormData(event.target);
+
+  fetch("/cs/postConsultant1", {
+    headers: {
+	    Accept: "application / json",
+	  },
     method: "POST",
+    redirect: 'follow',
+    referrer: 'no-referrer',
     body: new URLSearchParams({
       custNm: formData.get("custNm"),
       sex: formData.get("sex"),
@@ -26,38 +38,42 @@ function fn_reqConsult(event) {
       ptblTlno: formData.get("ptblTlno"),
       cnslDtm: formData.get("cnslDtm"),
       arNm: formData.get("arNm"),
+      memo: formData.get("memo"),
     }),
   })
     .then(res => {
       return res.json();
     })
     .then(json => {
-      if (json.result === '200') {
-        alert(json.msg);
-        location.href = document.referrer;
-      }
+        if (json.code === '0') {
+          location.pathname = '/cs/consultantComplete';
+        } else {
+          toast(json.msg);
+        }
     })
     .catch(err => {
-      alert(err);
+      toast(err);
     });
 }
 
 function checkBrdt(){
   const brdt = document.getElementById("brdt").value;
-  if(brdt.length < 8){
+  if (brdt !== "" && brdt.length < 8){
 		return false;
-	}
-  var regeExp = /^(19[0-9][0-9]|20\d{2})-(0[0-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/;
-  return regeExp.test(brdt);
+	} else {
+    var regeExp = /^(19[0-9][0-9]|20\d{2})-(0[0-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/;
+    return regeExp.test(brdt);
+  }
 }
 
 function checkPhoneNumber(){
   const ptblTlno = document.getElementById("ptblTlno").value;
-  if(ptblTlno == ""){
+  if (ptblTlno != "" && ptblTlno.length < 12){
 		return false;
-	}
-	var regeExp = /^(01[016789]{1})-[0-9]{3,4}-[0-9]{4}$/;
-	return regeExp.test(ptblTlno);
+	} else {
+    var regeExp = /^(01[016789]{1})-[0-9]{3,4}-[0-9]{4}$/;
+	  return regeExp.test(ptblTlno);
+  }
 }
 
 function addHyphen(target) {
@@ -70,3 +86,5 @@ function addHyphen(target) {
     break;
   }
  }
+
+ 

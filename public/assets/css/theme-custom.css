@@ -673,9 +673,12 @@ input[type=radio]:checked + label{
     margin-top: 5px;
 }
 .proudct-item .logo{
-    height: 30px;
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 .proudct-item .name{
+    font-size: 1.2rem;
     font-weight: bold;
 }
 .proudct-item .desc{

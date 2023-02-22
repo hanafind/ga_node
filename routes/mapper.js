@@ -55,7 +55,7 @@ let sqlPostView =
 `SELECT
     p.idx,
     pc.idx as category_idx, pc.name, pc.name_ko,
-    p.title, p.contents, p.created_at, p.posti₩ng_date, p.is_audit, p.audit_num_year, p.audit_num_month, p.audit_num_index, 
+    p.title, p.contents, p.created_at, p.posting_date, p.is_audit, p.audit_num_year, p.audit_num_month, p.audit_num_index, 
     (p.audit_grant_start_date || '~' || p.audit_grant_end_date) as audit_date, 
     p.is_visible, p.cover_image_url, p.cover_image_urls, p.url_slug, p.cover_type, p.cover_video_url, p.meta_title, p.meta_desc, p.meta_keywords,` 
    + sqlInterval 

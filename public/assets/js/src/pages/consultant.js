@@ -41,7 +41,7 @@ function fn_reqConsult(event) {
     })
     .then(json => {
         if (json.code == '0') {
-          location.pathname = '/cs/consultantComplete';
+          location.replace('/cs/consultantComplete');
         } else {
           toast(json.msg);
         }

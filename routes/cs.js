@@ -69,7 +69,7 @@ router.post("/postConsultant", async function (req, res) {
         } else {
             switch (resultAxios.resultMessage) {
                 case 'DUP_TLNO':
-                    resultAxios.resultMessage = '이미 상담 등록된 연락처입니다.';
+                    resultAxios.resultMessage = '이미 상담 신청중인 연락처입니다.';
                     break;
             }
         }

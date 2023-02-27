@@ -56,7 +56,10 @@ router.post("/postConsultant", async function (req, res) {
         req.body.cnslDtmFrom = req.body.cnslDtm.substr(0,4);
         req.body.cnslDtmTo = req.body.cnslDtm.substr(4,4);
 
-        // // GPS
+        // local test
+        // res.json({code:'0', msg: 'suc'});
+
+        // GPS
         let resultAxios = await modules.axios.postConsultGps(req.body);
 
         if (resultAxios.resultCd == '0') {

@@ -1,7 +1,3 @@
-// document.addEventListener("hide.bs.modal", function() {
-//   location.href = document.referrer; 
-// });
-
 function fn_reqConsult(event) {
   event.preventDefault();
 

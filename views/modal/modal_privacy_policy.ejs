@@ -273,3 +273,21 @@
     </div>
   </div>
 </div>
+
+<script>
+document.addEventListener("show.bs.modal", function() {
+  history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+      history.go(1);
+  };
+});
+
+document.addEventListener("hide.bs.modal", function() {
+  history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+      history.back();
+  };
+});
+
+
+</script>

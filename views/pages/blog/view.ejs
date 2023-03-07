@@ -5,7 +5,7 @@
     <% include head %>
 
     <meta charset="utf-8">
-    <title>고객중심 보험 서비스 - 하나금융파인드 <%- data[0].title %></title>
+    <title><%- data[0].title %> | 하나공감 - 하나금융파인드</title>
 
     <!-- SEO Meta Tags -->
     <meta name="description" content="<%- data[0].meta_desc %>">
@@ -15,7 +15,7 @@
     <meta property="og:description" content="<%- data[0].meta_desc %>">
     <meta property="og:image" content="<%= req.protocol %>://<%= req.headers.host %><%= data[0].cover_image_urls.w720 %>">
     <meta property="og:url" content="<%= req.protocol %>://<%= req.headers.host %><%= req.originalUrl %>">
-    <meta property="og:site_name" content="하나금융파인드 하나공감">
+    <meta property="og:site_name" content="하나공감 - 하나금융파인드">
     <meta name="twitter:creator" content="하나금융파인드">
     <meta name="twitter:card" content="<%= req.protocol %>://<%= req.headers.host %><%= data[0].cover_image_urls.w720 %>">
     <meta name="twitter:title" content="<%- data[0].meta_title %>"> 
